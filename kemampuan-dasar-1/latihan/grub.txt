@@ -1,0 +1,9 @@
+didalam menu Grub
+-Ubuntu ,untuk masuk ke sistem ubuntu
+-Advanced options for ubuntu, berisi:
+	ubuntu, with linux 4.15.0-55-generic
+	ubuntu, with linux 4.15.0-55-generic(recovery mode)
+	ubuntu, with linux 4.15.0-51-generic 
+	ubuntu, with linux 4.15.0-51-generic(recovery mode)
+-System setup , berisi:settingan bios laptop
+

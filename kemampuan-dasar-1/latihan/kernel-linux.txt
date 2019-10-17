@@ -1,0 +1,12 @@
+lokasi kernel ada di:
+/boot/
+
+salah satu isi di /boot/:
+vmlinuz-4.15.0-51-generic
+
+penjelasan
+vmlinuz-version (Virtual Memory) atau yg sering di sebut dengan kernelRead Only
+vmlinuz adalah nama dari kernel Linux executable.
+Vmlinuz terletak di direktori / boot, yang merupakan direktori yang berisi file yang dibutuhkan untuk memulai booting sistem
+
+

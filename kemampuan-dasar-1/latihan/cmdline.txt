@@ -1,0 +1,52 @@
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ ls
+cmdline.txt  env.txt  grub.txt  kernel-linux.txt
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cd ..
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls -R
+.:
+latihan
+
+./latihan:
+cmdline.txt  env.txt  grub.txt  kernel-linux.txt
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls -a -R
+.:
+.  ..  latihan
+
+./latihan:
+.  ..  cmdline.txt  env.txt  grub.txt  .hidden  kernel-linux.txt
+
+./latihan/.hidden:
+.  ..
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ cd latihan/
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cat > sample1
+ini sample ke 1
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cat sample1
+ini sample ke 1
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cat > sample2
+ ini juga sample ke 2
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cat sample1 sample2 > samplegabungan
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cat samplegabungan 
+ini sample ke 1
+ ini juga sample ke 2
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ ls
+cmdline.txt  grub.txt          sample1  samplegabungan
+env.txt      kernel-linux.txt  sample2
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ rm sample1triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ ls
+cmdline.txt  env.txt  grub.txt  kernel-linux.txt  sample2  samplegabungan
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ mv sample2 /media/umum/praxis-academy/kemampuan-dasar-1/
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ ls
+cmdline.txt  env.txt  grub.txt  kernel-linux.txt  samplegabungan
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cd ..
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls
+latihan  sample2
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ cd latihan/
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1/latihan$ cd ..
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ mv sample2 samplerename
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls
+latihan  samplerename
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ mkdir contohmkdir
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls
+contohmkdir  latihan  samplerename
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ rmdir contohmkdir/triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ ls
+latihan  samplerename
+triyono@develop:/media/umum/praxis-academy/kemampuan-dasar-1$ 
+
