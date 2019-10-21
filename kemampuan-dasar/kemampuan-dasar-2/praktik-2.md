@@ -1,29 +1,12 @@
-untuk memasang/ inisiasi git
-$ git init
+# Team Collaboration With GitHub
+1. Adding Team Members - Organization & Collaborators
+2. Pull Requests - Sending & Merging
+3. Bug Tracking - Github Issues
+4. Analytics - Graphs & Network
+5. Project Management - Trello & Pivotal Tracker
+6. Continuous Integration - Travis CI
+7. Code Review - Line Commenting & URL queries
+8. Documenting - Wiki & Hubot
 
-untuk menambahkan ke git 
-$ git add .
-
-untuk menyimpan ke git 
-$ git commit -m "pesan dari commit an"
-
-untuk menambahkan remote ke github 
-$ git remote add origin  url_github
-
-untuk mengupload ke github
-$ git push origin master
-
-untuk mengambil dari repositori github
-$ git pull origin master
-
-untuk menambahkan akun github
-$ git config --global user.name "John Doe"
-$ git config --global user.email johndoe@example.com
-
-untuk menambahkan branch atau cabang,biasanya fitur2
-$ git checkout -b nama_branch  
-
-untuk berpindah cabang/branch
-$ git checkout nama_branch 
-
-
+## Tool 1: Adding Team Members
+There are generally two ways of setting up Github for team collaboration:
