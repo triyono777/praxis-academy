@@ -1,4 +1,4 @@
-Step 1: Alice creates a new project and hosts it on GitHub.
+#Step 1: Alice creates a new project and hosts it on GitHub.
 
 triyono@develop:/media/umum/praxis-tugas$ mkdir rhymes
 triyono@develop:/media/umum/praxis-tugas$ cd rhymes/
@@ -308,7 +308,7 @@ To https://github.com/triyono777/rhymes.git
 triyono@develop:/media/umum/praxis-tugas/rhymes$
 
 =======================================================================================================================================================
-Step 2: Bob copies Alice's project, then submits some simple changes
+#Step 2: Bob copies Alice's project, then submits some simple changes
 
 triyono@develop:/media/umum/praxis-tugas/foldernya bob$ git clone https://github.com/triyonoyangbagus/rhymes.git
 Cloning into 'rhymes'...
@@ -380,7 +380,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$
 
 ==================================================================================================
-Step 3: Alice reviews and accepts Bob's simple changes
+#Step 3: Alice reviews and accepts Bob's simple changes
 
 triyono@develop:/media/umum/praxis-tugas$ cd rhymes/
 triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote rename origin alice
@@ -481,7 +481,7 @@ triyono@develop:/media/umum/praxis-tugas/rhymes$
 
 ============================================================================================
 
-Step 4: Bob makes lots of changes
+#Step 4: Bob makes lots of changes
 Bob updates his repo, to get it up to date with Alice's
 
 triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git pull origin master
