@@ -13,3 +13,5 @@ There are generally two ways of setting up Github for team collaboration:
 1. Organizations - Menambahkan organisasi Universitas Dutabangsa Surakarta
 
 ![alt text](https://github.com/triyono777/images/blob/master/1.make%20organisation.png)
+![alt text](https://github.com/triyono777/images/blob/master/2.make%20percobaan%20collabs%20team.png)
+![alt text](https://github.com/triyono777/images/blob/master/3.dasaboard%20oragnisasi.png)
