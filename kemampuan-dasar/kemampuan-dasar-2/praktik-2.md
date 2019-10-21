@@ -310,66 +310,282 @@ triyono@develop:/media/umum/praxis-tugas/rhymes$
 =======================================================================================================================================================
 Step 2: Bob copies Alice's project, then submits some simple changes
 
-triyono@develop:/media/umum/praxis-tugas/foldernya bob$ git clone https://github.com/triyono777/rhymes.git
+triyono@develop:/media/umum/praxis-tugas/foldernya bob$ git clone https://github.com/triyonoyangbagus/rhymes.git
 Cloning into 'rhymes'...
-remote: Enumerating objects: 21, done.
-remote: Counting objects: 100% (21/21), done.
-remote: Compressing objects: 100% (11/11), done.
-remote: Total 21 (delta 8), reused 20 (delta 7), pack-reused 0
-Unpacking objects: 100% (21/21), done.
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 24 (delta 10), reused 21 (delta 7), pack-reused 0
+Unpacking objects: 100% (24/24), done.
 triyono@develop:/media/umum/praxis-tugas/foldernya bob$ cd rhymes/
 triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git checkout -b hickory-dickory
 Switched to a new branch 'hickory-dickory'
 triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ wget https://github.com/bryanhirsch/rhymes/blob/master/hickory-dickory-dock.txt
---2019-10-21 09:55:23-- https://github.com/bryanhirsch/rhymes/blob/master/hickory-dickory-dock.txt
+--2019-10-21 10:10:09-- https://github.com/bryanhirsch/rhymes/blob/master/hickory-dickory-dock.txt
 Resolving github.com (github.com)... 13.229.188.59
 Connecting to github.com (github.com)|13.229.188.59|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/html]
 Saving to: ‘hickory-dickory-dock.txt’
 
-hickory-dickory-doc [ <=> ] 64,16K --.-KB/s in 0,08s
+hickory-dickory-doc [ <=> ] 64,16K --.-KB/s in 0,1s
 
-2019-10-21 09:55:24 (763 KB/s) - ‘hickory-dickory-dock.txt’ saved [65702]
+2019-10-21 10:10:10 (658 KB/s) - ‘hickory-dickory-dock.txt’ saved [65703]
 
-triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ add hickory-dickory-dock.txt
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git commit -m 'added hickory-dickory-dock.txt'
+On branch hickory-dickory
+Untracked files:
+hickory-dickory-dock.txt
 
-Command 'add' not found, did you mean:
-
-command 'axd' from deb afnix
-command 'aid' from deb id-utils
-command 'atd' from deb at
-command 'tdd' from deb devtodo
-command 'and' from deb and
-command 'pdd' from deb pdd
-command 'ad' from deb netatalk
-command 'dad' from deb debian-dad
-command 'adb' from deb adb
-command 'amd' from deb am-utils
-command 'ddd' from deb ddd
-command 'dd' from deb coreutils
-command 'adbd' from deb android-tools-adbd
-command 'ldd' from deb libc-bin
-
-Try: sudo apt install <deb name>
-
-triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git add hickory-dickory-dock.txt 
-triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git commit -m 'adde hickory-dickory.txt'
-[hickory-dickory 2a37f44] adde hickory-dickory.txt
+nothing added to commit but untracked files present
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git add .
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git commit -m 'added hickory-dickory-dock.txt'
+[hickory-dickory 53e8eb2] added hickory-dickory-dock.txt
 1 file changed, 882 insertions(+)
 create mode 100644 hickory-dickory-dock.txt
-triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git push origin hickory-dickory
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git push origin hickory-dickory
+To https://github.com/triyonoyangbagus/rhymes.git
+ ! [rejected]        hickory-dickory -> hickory-dickory (non-fast-forward)
+error: failed to push some refs to 'https://github.com/triyonoyangbagus/rhymes.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote -vorigin https://github.com/triyonoyangbagus/rhymes.git (fetch)
+origin https://github.com/triyonoyangbagus/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> hickory-dickory
+
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git pull origin master
+From https://github.com/triyonoyangbagus/rhymes
+
+- branch master -> FETCH_HEAD
+  Already up to date.
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git push origin hickory-dickory
+To https://github.com/triyonoyangbagus/rhymes.git
+ ! [rejected]        hickory-dickory -> hickory-dickory (non-fast-forward)
+error: failed to push some refs to 'https://github.com/triyonoyangbagus/rhymes.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$
+
+==================================================================================================
+Step 3: Alice reviews and accepts Bob's simple changes
+
+triyono@develop:/media/umum/praxis-tugas$ cd rhymes/
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote rename origin alice
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote add bob https://github.com/triyono777/rhymes.git
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote
+alice
+bob
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote -v
+alice	https://github.com/triyono777/rhymes.git (fetch)
+alice	https://github.com/triyono777/rhymes.git (push)
+bob	https://github.com/triyono777/rhymes.git (fetch)
+bob	https://github.com/triyono777/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote rename bob alice
+fatal: remote alice already exists.
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote rename bob alice2
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote -v
+alice https://github.com/triyono777/rhymes.git (fetch)
+alice https://github.com/triyono777/rhymes.git (push)
+alice2 https://github.com/triyono777/rhymes.git (fetch)
+alice2 https://github.com/triyono777/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote add bob https://github.com/triyonoyangbagus/rhymes.git
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git remote -v
+alice https://github.com/triyono777/rhymes.git (fetch)
+alice https://github.com/triyono777/rhymes.git (push)
+alice2 https://github.com/triyono777/rhymes.git (fetch)
+alice2 https://github.com/triyono777/rhymes.git (push)
+bob https://github.com/triyonoyangbagus/rhymes.git (fetch)
+bob https://github.com/triyonoyangbagus/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/rhymes\$ git fetch bob
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/triyonoyangbagus/rhymes
+
+- [new branch] hickory-dickory -> bob/hickory-dickory
+- [new branch] master -> bob/master
+  triyono@develop:/media/umum/praxis-tugas/rhymes\$ git branch -a
+- master
+  remotes/alice/master
+  remotes/bob/hickory-dickory
+  remotes/bob/master
+  triyono@develop:/media/umum/praxis-tugas/rhymes$ git checkout -b hickory-dickory  bob/hickory-dickory 
+Branch 'hickory-dickory' set up to track remote branch 'hickory-dickory' from 'bob'.
+Switched to a new branch 'hickory-dickory'
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git diff master hickory-dickory
+  diff --git a/hickory-dickory-dock.txt b/hickory-dickory-dock.txt
+  new file mode 100644
+  index 0000000..b84c05a
+  --- /dev/null
+  +++ b/hickory-dickory-dock.txt
+  @@ -0,0 +1,882 @@
+
+* - - - - - +<!DOCTYPE html> +<html lang="en">
+
+- <head>
+- <meta charset="utf-8">
+- <link rel="dns-prefetch" href="https://github.githubassets.com">
+- <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+- <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+- <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+- <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+- <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+- <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+  triyono@develop:/media/umum/praxis-tugas/rhymes$ git log -l -p
+  commit 2a37f440f41c0afa272500356ea9901a46d3a20b (HEAD -> hickory-dickory, bob/hickory-dickory)
+  Author: triyono <yono.tri@gmail.com>
+  Date:   Mon Oct 21 09:56:10 2019 +0700
+
+      adde hickory-dickory.txt
+
+commit a08153d5012c42417a5078ca8e0017ebd6c75257 (bob/master, alice/master, master)
+Author: triyono <yono.tri@gmail.com>
+Date: Mon Oct 21 09:53:49 2019 +0700
+
+    hapus hickory-dickory - mencoba ikut tutorial
+
+commit 2192eae14aa6ec9ff9b589680274509602799607
+Author: triyono <yono.tri@gmail.com>
+Date: Mon Oct 21 09:46:46 2019 +0700
+
+     added all-around-the-mulberry-bush.txt,hickory-dickory-dock.txt ,hokey-pokey.txt,jack-and-jill.txt,old-mother-hubbard.txt,roses-are-red.txt ,twinkle-twinkle.txt
+
+commit 8dd60534c6ecfc5370aa116418b5ad3651a1ab3c
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'alice/master'.
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git merge hickory-dickory
+Updating a08153d..2a37f44
+Fast-forward
+hickory-dickory-dock.txt | 882 +++++++++++++++++++++++++++++++++++++++++++++++
+1 file changed, 882 insertions(+)
+create mode 100644 hickory-dickory-dock.txt
+triyono@develop:/media/umum/praxis-tugas/rhymes$ git branch -D hickory-dickory 
+Deleted branch hickory-dickory (was 2a37f44).
+triyono@develop:/media/umum/praxis-tugas/rhymes$
+
+============================================================================================
+
+Step 4: Bob makes lots of changes
+Bob updates his repo, to get it up to date with Alice's
+
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ git pull origin master
+From https://github.com/triyonoyangbagus/rhymes
+
+- branch master -> FETCH_HEAD
+  Already up to date.
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git push origin hickory-dickory
+To https://github.com/triyonoyangbagus/rhymes.git
+ ! [rejected]        hickory-dickory -> hickory-dickory (non-fast-forward)
+error: failed to push some refs to 'https://github.com/triyonoyangbagus/rhymes.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote rename origin bob
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote rename bob origin
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote
+  origin
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$ clear
+
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote rename origin bob
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote add alice https://github.com/triyonoyangbagus/rhymes.git
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote
+alice
+bob
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote -valice https://github.com/triyonoyangbagus/rhymes.git (fetch)
+alice https://github.com/triyonoyangbagus/rhymes.git (push)
+bob https://github.com/triyonoyangbagus/rhymes.git (fetch)
+bob https://github.com/triyonoyangbagus/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote rename alice bob2
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote add alice https://github.com/triyono777/rhymes.git
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote -valice	https://github.com/triyono777/rhymes.git (fetch)
+alice	https://github.com/triyono777/rhymes.git (push)
+bob	https://github.com/triyonoyangbagus/rhymes.git (fetch)
+bob	https://github.com/triyonoyangbagus/rhymes.git (push)
+bob2	https://github.com/triyonoyangbagus/rhymes.git (fetch)
+bob2	https://github.com/triyonoyangbagus/rhymes.git (push)
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote update
+Fetching bob
+Fetching bob2
+From https://github.com/triyonoyangbagus/rhymes
+
+- [new branch] hickory-dickory -> bob2/hickory-dickory
+- [new branch] master -> bob2/master
+  Fetching alice
+  From https://github.com/triyono777/rhymes
+- [new branch] master -> alice/master
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'bob/master'.
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git merge alice/master
+  Already up to date.
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git add .
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git commit -m "perubahan banyak"
+  [master 448d8a3] perubahan banyak
+  5 files changed, 15 insertions(+)
+  create mode 100644 perubahan banyak (3rd copy).txt
+  create mode 100644 perubahan banyak (4th copy).txt
+  create mode 100644 perubahan banyak (another copy).txt
+  create mode 100644 perubahan banyak (copy).txt
+  create mode 100644 perubahan banyak .txt
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git remote update
+Fetching bob
+Fetching bob2
+Fetching alice
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git checkout master
+  Already on 'master'
+  Your branch is ahead of 'bob/master' by 1 commit.
+  (use "git push" to publish your local commits)
+  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git merge alice/master 
+Already up to date.
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git diff alice/master
+  diff --git a/perubahan banyak (3rd copy).txt b/perubahan banyak (3rd copy).txt
+  new file mode 100644
+  index 0000000..44eced2
+  --- /dev/null
+  +++ b/perubahan banyak (3rd copy).txt  
+  @@ -0,0 +1,3 @@
+  +tambahan
+  +ini buat perubahan yag dilakukan oleh bob, anggep saja berubahnya banyak
+
++
+diff --git a/perubahan banyak (4th copy).txt b/perubahan banyak (4th copy).txt
+new file mode 100644
+index 0000000..44eced2
+--- /dev/null
++++ b/perubahan banyak (4th copy).txt  
+@@ -0,0 +1,3 @@
++tambahan
++ini buat perubahan yag dilakukan oleh bob, anggep saja berubahnya banyak +
+diff --git a/perubahan banyak (another copy).txt b/perubahan banyak (another copy).txt
+new file mode 100644
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ 
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes$ git push bob master
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 14.14 KiB | 4.71 MiB/s, done.
+Writing objects: 100% (3/3), 393 bytes | 393.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote:
-remote: Create a pull request for 'hickory-dickory' on GitHub by visiting:
-remote: https://github.com/triyono777/rhymes/pull/new/hickory-dickory
-remote:
-To https://github.com/triyono777/rhymes.git
+To https://github.com/triyonoyangbagus/rhymes.git
+! [remote rejected] master -> master (permission denied)
+error: failed to push some refs to 'https://github.com/triyonoyangbagus/rhymes.git'
+triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$
 
-- [new branch] hickory-dickory -> hickory-dickory
-  triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$
+# masih ada beberapa error , belum bisa menggunakan 2 akun github dalam 1 pc
