@@ -8,6 +8,7 @@ print('Hello, World');
 }
 ```
 Hasil:
+
 ![hasil](gambar/hello.png)
 
 ```dart
@@ -60,7 +61,8 @@ print(namaobjek);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+![hasil](gambar/for_in.png)
 
 ## for
 **for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya
@@ -72,7 +74,9 @@ print(month);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+
+![hasil](gambar/for.png)
 
 ## while
 **while** melakukan pengulangan saat kondisi terpenuhi atau **true**
@@ -85,7 +89,9 @@ print(year);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+
+![hasil](gambar/while.png)
 
 # Functions
 ```dart
@@ -98,7 +104,8 @@ var result = perpangkatan(35);
 print(result);
 ```
 Hasil:
-![hasil]
+
+![hasil](gambar/fungsi.png)
 
 # Comments
 
