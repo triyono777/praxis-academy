@@ -1,29 +1,98 @@
-untuk memasang/ inisiasi git
-$ git init
+# Team Collaboration With GitHub
 
-untuk menambahkan ke git 
+1. Adding Team Members - Organization & Collaborators
+2. Pull Requests - Sending & Merging
+3. Bug Tracking - Github Issues
+4. Analytics - Graphs & Network
+5. Project Management - Trello & Pivotal Tracker
+6. Continuous Integration - Travis CI
+7. Code Review - Line Commenting & URL queries
+8. Documenting - Wiki & Hubot
+
+## Tool 1: Adding Team Members
+
+There are generally two ways of setting up Github for team collaboration:
+
+1. Organizations - Menambahkan organisasi Universitas Dutabangsa Surakarta
+
+![alt text](https://github.com/triyono777/images/blob/master/1.make%20organisation.png)
+
+Memberikan level akses masing-masing team :
+
+Pull Only: Fetch and Merge with another repository or a local copy. Read only access.
+Push and Pull: (1) along with updating of remote repo. Read + Write access.
+Push, Pull & Administrative: (1), (2) along with rights to billing info, creating teams as well as canceling Organization accounts. Read + Write + Admin access
+
+2. Menambahkan Collaborators - dengan akses Read + Write access untuk single repository
+
+## Tool 2: Pull Requests
+
+Dua model pull request di Github:
+
+1. **Fork & Pull Model** - Used in a public repository for which we don't have push access
+2. **Share Repository Model** - Used in a private repository for which we have push access. Fork is not required is this case.
+
+hasil setelah ditambahkan pull request dengan fork & full model
+
+Menggunakan akses SSH key passphrase dengan memasukkan username dan password setiap melakukan `git push` atau `git pull` dengan langkah sebagai berikut :
+
+```
+$ git clone [ssh-url] [folder-name]
+$ cd [folder-name]
+```
+
+Menambahkan branch baru dengan melakukan modifikasi terhadap file `readme.md` :
+
+```
+$ git checkout -b [new-feature]
+```
+
+Setelah membuat perubahan, dilakukan commit terhadap perubahan dengan melakukan checkout ke the git master branch
+
+```
 $ git add .
+$ git commit -m "information added in readme"
+$ git checkout master
+```
 
-untuk menyimpan ke git 
-$ git commit -m "pesan dari commit an"
+## Tool 3: Bug Tracking
 
-untuk menambahkan remote ke github 
-$ git remote add origin  url_github
+Untuk melakukan bug trackind dilakukan di menu Issues
 
-untuk mengupload ke github
-$ git push origin master
+## Tool 4: Analytics
 
-untuk mengambil dari repositori github
-$ git pull origin master
+Dua tools yang diberikan didalam repository adalah Graphs dan Network
+`https://github.com/[user-name]/[repo]/pulse`
+maka akan ditampilkan grafik sebagai berikut
 
-untuk menambahkan akun github
-$ git config --global user.name "John Doe"
-$ git config --global user.email johndoe@example.com
+untuk Network ditampilkan sebagai berikut
 
-untuk menambahkan branch atau cabang,biasanya fitur2
-$ git checkout -b nama_branch  
+## Tool 5: Project Management
 
-untuk berpindah cabang/branch
-$ git checkout nama_branch 
+**Github and Trello**
+Open an account in Trello
 
+Go to the Github repository > Settings > Service Hooks > Trello
 
+**Github and Pivotal Tracker**
+Create a new project in the Pivotal Tracker with a new Story that needs to be delivered.
+
+Go to Profile > API Token (right at the bottom). Copy the API token given.
+
+Come back to Github repository > Settings > Service Hooks > Pivotal Tracker
+
+## Tool 6: Continuous Integration
+
+**Travis CI with Pull Requests**
+
+## Tool 7: Code Review
+
+Setiap commit Github memungkinkan adanya komentar setiap baris kode, dengan membandingkan menggunakan Compare branches / tags / SHA1 , Compare without whitespace, Diff, Patch dan Line Linking
+
+## Tool 8: Documenting
+
+Dokumentasi digunakan dengan menggunakan Github Wiki untuk membuat dokumentasi dari source code, dapat ditambahkan Github Hubot dan Mentions, Shortcuts & Emoji
+
+![alt text](https://github.com/triyono777/images/blob/master/2.make%20percobaan%20collabs%20team.png)
+![alt text](https://github.com/triyono777/images/blob/master/3.dasaboard%20oragnisasi.png)
+![alt text](https://github.com/triyono777/images/blob/master/setting%20role.png)
