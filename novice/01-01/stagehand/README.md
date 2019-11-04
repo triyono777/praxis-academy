@@ -2,12 +2,15 @@
 # Hello World
 
 fungsi **main(){}** harus ada disetiap aplikasi yang dibuat
+*helloworld.dart*
+
 ```dart
 void main(){
 print('Hello, World');
 }
 ```
 Hasil:
+
 ![hasil](gambar/hello.png)
 
 ```dart
@@ -16,6 +19,7 @@ print();
 digunakan untuk menampilkan teks pada console
 ## Variabel
 pada dart dapat menggunakan **var** untuk semua tipe data dan secara otomastis tipe data kan menyesuaikan dengan **value** dari variabel tersebut
+*control_flow_statements.dart*
 
 ```dart
 var name = 'Voyager I';
@@ -40,6 +44,7 @@ Variabel diambil dari pada latihan diatas
 
 ## Conditional Statements IF ELSE ##
 Digunakan pada kasus dengan syarat tertentu atau terdapat beberapa kondisi yang memenuhi syarat
+*control_flow_statements.dart*
 
 ```dart
 if (year >= 2001){
@@ -53,6 +58,7 @@ print('abad 20');
 
 **for in** loop dapat digunakan pada variabel yang berupa list atau array.
 Jadi setiap object yang terdapat pada list tersebut akan dipanggil
+*control_flow_statements.dart*
 ```dart
 for (var namaobjek in flyObjects) {
 print(namaobjek);
@@ -60,10 +66,12 @@ print(namaobjek);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+![hasil](gambar/for_in.png)
 
 ## for
 **for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya
+*control_flow_statements.dart*
 
 ```dart
 for (int month=1; month <= 12; month++){
@@ -72,10 +80,13 @@ print(month);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+
+![hasil](gambar/for.png)
 
 ## while
 **while** melakukan pengulangan saat kondisi terpenuhi atau **true**
+*control_flow_statements.dart*
 
 ```dart
 while (year < 2000){
@@ -85,9 +96,15 @@ print(year);
 ```
 
 Hasil:
-![hasil](http://gambar.com/gambar.png)
+
+
+![hasil](gambar/while.png)
 
 # Functions
+
+fungsi digunakan supaya kode bisa reusable atau bisa dipakai ulang, jadi menghemat kodingan, 
+penulisanya : **jenis_variabel** **nama_fungsi** (**jenis_variabel** **nilai**){**fungsi yang dijalankan**};
+*fungsi.dart*
 ```dart
 int perpangkatan(int n){
 if (n==0 || n == 1) return n;
@@ -98,11 +115,13 @@ var result = perpangkatan(35);
 print(result);
 ```
 Hasil:
-![hasil]
+
+![hasil](gambar/fungsi.png)
 
 # Comments
 
 pada dart komentar biasanya menggunakan **//** untuk memberi tanda atau penjelasan pada suatu kode
+*comments.dart*
 
 ```dart
 //komentar dalam satu baris
@@ -117,6 +136,8 @@ komentar untuk beberapa baris/paragraf
 # Imports
 
 **import** digunakan untuk mengakses library
+
+*import.dart*
 ```dart
 //importing dari core library , library bawaan
 import 'dart:math';
