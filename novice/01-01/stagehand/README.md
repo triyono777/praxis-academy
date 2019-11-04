@@ -73,3 +73,36 @@ print(month);
 
 Hasil:
 ![hasil](http://gambar.com/gambar.png)
+
+## while
+**while** melakukan pengulangan saat kondisi terpenuhi atau **true**
+
+```dart
+while (year < 2000){
+year +=1;
+print(year);
+}
+```
+
+Hasil:
+![hasil](http://gambar.com/gambar.png)
+
+# Functions
+```dart
+int fibonacci(int n){
+if (n==0 || n == 1) return n;
+return fibonacci(n-1) + fibonacci(n-2);
+}
+
+var result = fibonacci(10);
+print(result);
+```
+
+# Comments
+
+pada dart komentar biasanya menggunakan **//** untuk memberi tanda atau penjelasan pada suatu kode
+
+```dart
+//komentar dalam satu baris
+/// komentar dokumentasi untuk library, class dan member
+
