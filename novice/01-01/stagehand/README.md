@@ -24,7 +24,7 @@ var antennaDiameter = 3.7;
 var flybyObject = ['Jupiter','Saturnus','Uranus','Neptunus', 'Merkurius'];
 var image = {
 'tags': ['merkurius'],
-'url':'http://gambar.com/merkurius.png'
+'url':'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/240px-Mercury_in_color_-_Prockter07_centered.jpg'
 };
 ```
 pada kode diatas variabel
@@ -54,7 +54,7 @@ print('abad 20');
 **for in** loop dapat digunakan pada variabel yang berupa list atau array.
 Jadi setiap object yang terdapat pada list tersebut akan dipanggil
 ```dart
-for (var namaobjek in flyObject) {
+for (var namaobjek in flyObjects) {
 print(namaobjek);
 }
 ```
@@ -66,7 +66,7 @@ Hasil:
 **for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya
 
 ```dart
-for (int month=1; month <=month; month++){
+for (int month=1; month <= 12; month++){
 print(month);
 }
 ```
@@ -97,6 +97,8 @@ return n*n;
 var result = perpangkatan(35);
 print(result);
 ```
+Hasil:
+![hasil]
 
 # Comments
 
