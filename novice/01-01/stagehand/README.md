@@ -8,7 +8,7 @@ print('Hello, World');
 }
 ```
 Hasil:
-![hasil](gambar/gambar.png)
+![hasil](gambar/hello.png)
 
 ```dart
 print();
