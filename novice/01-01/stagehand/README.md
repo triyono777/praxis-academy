@@ -22,18 +22,17 @@ var name = 'Voyager I';
 var year = 1997;
 var antennaDiameter = 3.7;
 var flybyObject = ['Jupiter','Saturnus','Uranus','Neptunus', 'Merkurius'];
-
 var image = {
 'tags': ['merkurius'],
 'url':'http://gambar.com/merkurius.png'
 };
 ```
 pada kode diatas variabel
-**name** akan bertipe **String**,
-**year** akan bertipe **int**,
-**antennaDiameter** akan bertipe **double**,
-**flyObject** akan bertipe **array**,
-**image** akan bertipe **map**
+**name** akan bertipe **String**, <br />
+**year** akan bertipe **int**, <br />
+**antennaDiameter** akan bertipe **double**, <br />
+**flyObject** akan bertipe **array**, <br />
+**image** akan bertipe **map** <br />
 
 # Control flow statements
 
@@ -42,7 +41,7 @@ Variabel diambil dari pada latihan diatas
 ## Conditional Statements IF ELSE ##
 Digunakan pada kasus dengan syarat tertentu atau terdapat beberapa kondisi yang memenuhi syarat
 
-``dart
+```dart
 if (year >= 2001){
 print('abad 21');
 }else if (year >= 1901){
@@ -50,3 +49,27 @@ print('abad 20');
 }
 ```
 
+## for in
+
+**for in** loop dapat digunakan pada variabel yang berupa list atau array.
+Jadi setiap object yang terdapat pada list tersebut akan dipanggil
+```dart
+for (var namaobjek in flyObject) {
+print(namaobjek);
+}
+```
+
+Hasil:
+![hasil](http://gambar.com/gambar.png)
+
+## for
+**for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya
+
+```dart
+for (int month=1; month <=month; month++){
+print(month);
+}
+```
+
+Hasil:
+![hasil](http://gambar.com/gambar.png)
