@@ -20,13 +20,14 @@ void main() {
   //   print(object);
   // }
 
-  for (int month = 1; month <= 12; month++) {
-    print(month);
-  }
-
-  // while (year < 2016) {
-  //   year += 1;
+  // for (int month = 1; month <= 12; month++) {
+  //   print(month);
   // }
+
+  while (year < 2000) {
+    year += 1;
+    print(year);
+  }
 
   // for (var planet in flyObjects) {
   //   print(planet);
