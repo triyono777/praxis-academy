@@ -89,12 +89,12 @@ Hasil:
 
 # Functions
 ```dart
-int fibonacci(int n){
+int perpangkatan(int n){
 if (n==0 || n == 1) return n;
-return fibonacci(n-1) + fibonacci(n-2);
+return n*n;
 }
 
-var result = fibonacci(10);
+var result = perpangkatan(35);
 print(result);
 ```
 
@@ -104,5 +104,26 @@ pada dart komentar biasanya menggunakan **//** untuk memberi tanda atau penjelas
 
 ```dart
 //komentar dalam satu baris
-/// komentar dokumentasi untuk library, class dan member
+
+/// komentar dokumentasi untuk library, class dan member (auto nambah "///" saat enter)
+
+/*
+komentar untuk beberapa baris/paragraf
+*/
+```
+
+# Imports
+
+**import** digunakan untuk mengakses library
+```dart
+//importing dari core library , library bawaan
+import 'dart:math';
+
+//import dari sumber lain (external package), atau diluar bawaan
+import 'package:test/test.dart';
+
+//import files 
+import 'path/file/fila_lain.dart';
+```
+
 
