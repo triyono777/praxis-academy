@@ -1,7 +1,7 @@
 # Hari ke-1 | memulai dart
 # Hello World
 
-fungsi **main(){}** harus ada disetiap aplikasi yang dibuat
+fungsi **main(){}** harus ada disetiap aplikasi yang dibuat <br />
 *helloworld.dart*
 
 ```dart
@@ -18,7 +18,7 @@ print();
 ``` 
 digunakan untuk menampilkan teks pada console
 ## Variabel
-pada dart dapat menggunakan **var** untuk semua tipe data dan secara otomastis tipe data kan menyesuaikan dengan **value** dari variabel tersebut
+pada dart dapat menggunakan **var** untuk semua tipe data dan secara otomastis tipe data kan menyesuaikan dengan **value** dari variabel tersebut  <br />
 *control_flow_statements.dart*
 
 ```dart
@@ -43,7 +43,7 @@ pada kode diatas variabel
 Variabel diambil dari pada latihan diatas
 
 ## Conditional Statements IF ELSE ##
-Digunakan pada kasus dengan syarat tertentu atau terdapat beberapa kondisi yang memenuhi syarat
+Digunakan pada kasus dengan syarat tertentu atau terdapat beberapa kondisi yang memenuhi syarat  <br />
 *control_flow_statements.dart*
 
 ```dart
@@ -57,7 +57,7 @@ print('abad 20');
 ## for in
 
 **for in** loop dapat digunakan pada variabel yang berupa list atau array.
-Jadi setiap object yang terdapat pada list tersebut akan dipanggil
+Jadi setiap object yang terdapat pada list tersebut akan dipanggil  <br />
 *control_flow_statements.dart*
 ```dart
 for (var namaobjek in flyObjects) {
@@ -70,7 +70,7 @@ Hasil:
 ![hasil](gambar/for_in.png)
 
 ## for
-**for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya
+**for** melakukan pengulangan dengan memberi inisiasi, batas pengulangan , dan operasi pengulanganya  <br />
 *control_flow_statements.dart*
 
 ```dart
@@ -85,7 +85,7 @@ Hasil:
 ![hasil](gambar/for.png)
 
 ## while
-**while** melakukan pengulangan saat kondisi terpenuhi atau **true**
+**while** melakukan pengulangan saat kondisi terpenuhi atau **true**  <br />
 *control_flow_statements.dart*
 
 ```dart
@@ -103,7 +103,7 @@ Hasil:
 # Functions
 
 fungsi digunakan supaya kode bisa reusable atau bisa dipakai ulang, jadi menghemat kodingan, 
-penulisanya : **jenis_variabel** **nama_fungsi** (**jenis_variabel** **nilai**){**fungsi yang dijalankan**};
+penulisanya : **jenis_variabel** **nama_fungsi** (**jenis_variabel** **nilai**){**fungsi yang dijalankan**};  <br />
 *fungsi.dart*
 ```dart
 int perpangkatan(int n){
@@ -120,7 +120,7 @@ Hasil:
 
 # Comments
 
-pada dart komentar biasanya menggunakan **//** untuk memberi tanda atau penjelasan pada suatu kode
+pada dart komentar biasanya menggunakan **//** untuk memberi tanda atau penjelasan pada suatu kode  <br />
 *comments.dart*
 
 ```dart
@@ -135,7 +135,7 @@ komentar untuk beberapa baris/paragraf
 
 # Imports
 
-**import** digunakan untuk mengakses library
+**import** digunakan untuk mengakses library  <br />
 
 *import.dart*
 ```dart
