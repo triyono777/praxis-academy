@@ -6,6 +6,6 @@ main() {
 class StaticMemori {
   static var nomor;
   static tampil() {
-    print('nilai dari num dalah ${StaticMemori.nomor}');
+    print('nilai dari num adalah ${StaticMemori.nomor}');
   }
 }
