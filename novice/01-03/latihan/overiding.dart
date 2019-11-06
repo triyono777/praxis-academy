@@ -3,6 +3,7 @@ main() {
   c.m1(33);
 }
 
+//overiding adalah untuk mengambil alih / mengubah nilai sebelumnya
 class Parent {
   m1(var a) {
     print('value of a ${a}');
