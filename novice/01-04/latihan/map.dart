@@ -41,4 +41,11 @@ main() {
 
   dataPribadi.forEach((k, v) =>
       print('${k},${v}')); // untuk menuliskan masing2 key dan valuenya
+
+  var daftarNama = {1: 'tri', 2: 'yono'};
+  daftarNama[2] = 'ini nomor 2';
+  daftarNama[5] = 'ini nomor 5';
+  daftarNama[10] = 'ini nomor 10'; //contoh penulisan dengan integer
+
+  print(daftarNama);
 }
