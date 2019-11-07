@@ -1,27 +1,27 @@
-class genericClass<T> {
-  T ob;
-  genericClass(T o) {
-    ob = o;
+class classSendiri<TipeDataBaru> {
+  TipeDataBaru barangBaru;
+  classSendiri(TipeDataBaru objekbarang) {
+    barangBaru = objekbarang;
   }
-  T getob() {
-    return ob;
+  TipeDataBaru getbarangBaru() {
+    return barangBaru;
   }
 
   tampilTipe() {
-    print('Type of T is ${ob.runtimeType}');
+    print('Type of TipeDataBaru is ${barangBaru.runtimeType}');
   }
 }
 
 main() {
-  var iOb = genericClass<int>(88);
-  iOb.tampilTipe();
+  var intBarangBaru = classSendiri<int>(88);
+  intBarangBaru.tampilTipe();
 
-  int v = iOb.getob();
-  print('value: ${v}');
+  int isi = intBarangBaru.getbarangBaru();
+  print('value: ${isi}');
 
-  var strOb = genericClass<String>('Generic Test');
-  strOb.tampilTipe();
+  var stringBarangBaru = classSendiri<String>('Generic Test');
+  stringBarangBaru.tampilTipe();
 
-  var str = strOb.getob();
-  print('value: ${str}');
+  var kata = stringBarangBaru.getbarangBaru();
+  print('value: ${kata}');
 }
