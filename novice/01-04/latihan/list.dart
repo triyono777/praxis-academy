@@ -34,4 +34,24 @@ main() {
   // print(listPertama.last); // list terakhir
   // print(listPertama.reversed); // mengubah urutan list terbalik
   // print(listPertama.single);  // hanya bisa digunakan apabila anggota list hanya 1.
+
+  ///      basic operator list
+
+  var basicList = [
+    88,
+    21,
+    3,
+    2,
+    4,
+  ];
+
+  // basicList.add(99); // menambah ke dalam list
+  // basicList.addAll([88, 3, 4, 54, 5, 5, 4]); // menambah banyak ke list
+  // basicList.insert(2, 77); // memasukkan angka 77 ke dalam index ke-2 , index dimulai  dari 0
+  // basicList.insertAll(3, [55,6,7,4,4,3,3,]);// menambahkan banyak ke dalam list pada index 3
+
+  // basicList[0] = 77; // update list , mereplace anggota list pada index 0 menjadi 77
+  // basicList.replaceRange(1, 3, [97, 65, 77,88,77]); //update list,hanya akan mereplace index 1 sampai 3, apabila anggota nya masih banyak akan di masukkan setelahnya
+
+  print(basicList);
 }
