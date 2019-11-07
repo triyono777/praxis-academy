@@ -37,13 +37,7 @@ main() {
 
   ///      basic operator list
 
-  var basicList = [
-    88,
-    21,
-    3,
-    2,
-    4,
-  ];
+  ///##### update
 
   // basicList.add(99); // menambah ke dalam list
   // basicList.addAll([88, 3, 4, 54, 5, 5, 4]); // menambah banyak ke list
@@ -52,6 +46,22 @@ main() {
 
   // basicList[0] = 77; // update list , mereplace anggota list pada index 0 menjadi 77
   // basicList.replaceRange(1, 3, [97, 65, 77,88,77]); //update list,hanya akan mereplace index 1 sampai 3, apabila anggota nya masih banyak akan di masukkan setelahnya
+
+  /// #########  Remove
+  List basicList = [
+    88,
+    21,
+    3,
+    2,
+    4,
+  ];
+  // basicList.remove(3); //menghapus value / nilai bukan index
+  // basicList.removeAt(2); // menghapus berdasarkan index
+  // dynamic ygDihapus = basicList.removeAt(2);
+  // print('nilai yang dihapus adalah ${ygDihapus}');
+
+  // basicList.removeLast(); // hapus elemen list yg terakhir
+  // basicList.removeRange(2, 4); // mengapus range 2 sampai 4, index ke 4 tidak terhapus
 
   print(basicList);
 }
