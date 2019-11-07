@@ -1,10 +1,16 @@
-class classSendiri<TipeDataBaru> {
+class classBaru<TipeDataBaru, Tipedatalain> {
+  Tipedatalain lain;
   TipeDataBaru barangBaru;
-  classSendiri(TipeDataBaru objekbarang) {
+  classBaru(TipeDataBaru objekbarang, Tipedatalain objeklain) {
     barangBaru = objekbarang;
+    lain = objeklain;
   }
   TipeDataBaru getbarangBaru() {
     return barangBaru;
+  }
+
+  Tipedatalain getBarangLain() {
+    return lain;
   }
 
   tampilTipe() {
@@ -13,13 +19,13 @@ class classSendiri<TipeDataBaru> {
 }
 
 main() {
-  var intBarangBaru = classSendiri<int>(88);
+  var intBarangBaru = classBaru<int, String>(88, 'lainnya');
   intBarangBaru.tampilTipe();
 
   int isi = intBarangBaru.getbarangBaru();
   print('value: ${isi}');
 
-  var stringBarangBaru = classSendiri<String>('Generic Test');
+  var stringBarangBaru = classBaru<String, int>('Generic Test', 9);
   stringBarangBaru.tampilTipe();
 
   var kata = stringBarangBaru.getbarangBaru();
