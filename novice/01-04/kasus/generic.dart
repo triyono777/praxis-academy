@@ -1,3 +1,8 @@
+/**
+ * Dalam Kasus ini saya membuat generic kasus untuk MAP,
+ * membuat fungsi seperti MAP
+ */
+
 class classBaru<TipeDataBaru, Tipedatalain> {
   Tipedatalain lain;
   TipeDataBaru barangBaru;
@@ -14,7 +19,8 @@ class classBaru<TipeDataBaru, Tipedatalain> {
   }
 
   tampilTipe() {
-    print('Type of TipeDataBaru is ${barangBaru.runtimeType}');
+    print(
+        'Type of TipeDataBaru is ${barangBaru.runtimeType}  & TipeDataLain ${lain.runtimeType}');
   }
 }
 
