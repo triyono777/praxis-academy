@@ -13,4 +13,10 @@ main() {
   // set.form
   var nomorsetFrom = Set.from([2, 3, 7, 11]);
   print(nomorsetFrom);
+
+  var elemet = <String>{}; // untuk mengeset anggota agar semua string
+  elemet.add('angin');
+
+  elemet.addAll({'api', 'air', 'tanah'});
+  print(elemet);
 }

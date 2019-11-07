@@ -7,7 +7,7 @@ main() {
   // print(dataLogin);
 
   //  MAP constructor
-  var dataPribadi = Map(); // membuat MAP kosongan dan menambahnya
+  var dataPribadi = Map(); // membuat MAP kosongan dan menambahnya , memakai []
   dataPribadi['nama'] = 'triyono';
   dataPribadi['alamat'] = 'sragen';
 
@@ -48,4 +48,11 @@ main() {
   daftarNama[10] = 'ini nomor 10'; //contoh penulisan dengan integer
 
   print(daftarNama);
+
+  var nomorMobil =
+      Map<int, String>(); // untuk mengeset tipe data pada key dan value
+  nomorMobil[2] = 'mobil nomer 2';
+  nomorMobil[3] = 'mobil nomer 3';
+  nomorMobil[4] = 'mobil nomer 4';
+  print(nomorMobil);
 }
