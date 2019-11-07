@@ -1,9 +1,14 @@
 main() {
+  ///############### SET   ######################
+  ///  semua anggota nya uniq, tidak boleh sama , kalau ada sama maka akan dianggap 1
   var nomorSet = Set();
   nomorSet.add(28);
   nomorSet.add(22);
   nomorSet.add(25);
   nomorSet.add(21);
+  nomorSet.add(26);
+  nomorSet.add(26);
+  nomorSet.add(26);
   nomorSet.add(26);
   print('default implementasi : ${nomorSet.runtimeType}');
   for (var nomer in nomorSet) {
