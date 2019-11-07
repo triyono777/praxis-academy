@@ -48,20 +48,39 @@ main() {
   // basicList.replaceRange(1, 3, [97, 65, 77,88,77]); //update list,hanya akan mereplace index 1 sampai 3, apabila anggota nya masih banyak akan di masukkan setelahnya
 
   /// #########  Remove
-  List basicList = [
+  var basicList = [
     88,
     21,
     3,
     2,
     4,
   ];
-  // basicList.remove(3); //menghapus value / nilai bukan index
+  basicList.remove(3); //menghapus value / nilai bukan index
   // basicList.removeAt(2); // menghapus berdasarkan index
   // dynamic ygDihapus = basicList.removeAt(2);
   // print('nilai yang dihapus adalah ${ygDihapus}');
 
   // basicList.removeLast(); // hapus elemen list yg terakhir
   // basicList.removeRange(2, 4); // mengapus range 2 sampai 4, index ke 4 tidak terhapus
+  // print(basicList);
 
-  print(basicList);
+  var listHapeS = ['sony', 'samsung'];
+  var listHapeChina = ['xiaomi', 'huawei'];
+
+  var listhape = [listHapeS, listHapeChina]; // menggabungkan list
+  var listHapeGabungan = [
+    'sony',
+    'panasonic',
+    'oppo',
+    ...listHapeChina,
+    listhape
+  ]; //menggabungkan list ke urutan selanjutnya
+
+  bool promo = true;
+  var listHapePromo = [
+    'sony',
+    'xiaomi',
+    if (promo) 'samsung'
+  ]; //cara pemakaian if dalam list
+  print('${listHapeGabungan},yang lagi promo: ${listHapePromo}');
 }
