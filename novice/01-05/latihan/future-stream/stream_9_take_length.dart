@@ -1,13 +1,7 @@
 main() async {
-  var jeda = Duration(seconds: 2);
-  var stream = Stream<int>.periodic(jeda, berubah);
+  var jeda = Duration(seconds: 1);
+  var stream = Stream<int>.periodic(jeda);
   stream = stream.take(5);
 
-  stream.forEach((int iniHasil) {
-    print(iniHasil);
-  });
-}
-
-int berubah(int nilai) {
-  return (nilai + 1) * 2;
+  print(await stream.length);
 }
