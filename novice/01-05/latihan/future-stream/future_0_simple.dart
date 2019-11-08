@@ -4,6 +4,6 @@ main() async {
 }
 
 Future<String> HaloAsync() async {
-  await Future.delayed(Duration(seconds: 5));
+  await Future.delayed(Duration(seconds: 2));
   return 'pesan dari FUTURE';
 }

@@ -1,15 +1,16 @@
 import 'dart:async';
 
 main() async {
-  var hasilStream = hitungStream(3);
+  var hasilStream = hitungStream(4);
   var jumlah = await penjumlahanStream(hasilStream);
-  print(jumlah);
+  // print(jumlah);
 }
 
 Future<int> penjumlahanStream(Stream<int> stream) async {
   var jumlah = 0;
   await for (var nilai in stream) {
-    jumlah += nilai;
+    // jumlah + nilai;
+    print(nilai);
   }
   return jumlah;
 }
@@ -17,5 +18,6 @@ Future<int> penjumlahanStream(Stream<int> stream) async {
 Stream<int> hitungStream(int sampai) async* {
   for (int mulai = 1; mulai <= sampai; mulai++) {
     yield mulai;
+    // return mulai;
   }
 }
