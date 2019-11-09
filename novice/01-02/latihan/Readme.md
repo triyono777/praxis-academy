@@ -43,8 +43,36 @@ final tanggal = DateTime.now(); // nilai belum diketahu dan nilai tidak dapat di
 ```dart
 const panjang= 20; // value harus diisi
 const int panjang= 20; 
-
 ```
+## 4. Tipe Data
+Pengertian dari tipe data itu sendiri adalah suatu memori pada komputer yang digunakan untuk menyimpan. Menyimpan apa? yaitu menyimpan jenis nilai dari suatu variabel.
+### numbers
+```dart
+ int angka = 9; // tipedata angka
+ double dobel = 2.5; // // tipedata double
+ int satu = int.parse('1'); //mengubah string ke integer
+ double dobel2 = double.parse('2.6'); //merubah string ke double
+ double gantiDobel2 = 2.89988777.toStringAsFixed(2); //dari dobel ke string dibulatkan biasanya untuk mata uang
+```
+### strings
+### booleans
+### runes
+### symbols
+
+## 5. fungsi / function
+## 6. Operator
+## 7. control flow
+### if
+### if else
+### for
+### do
+### do while
+### swicth case
+### break
+### continue
+### assert
+
+## 8. Error dan Exception Handling
 
 
 
