@@ -49,12 +49,25 @@ Pengertian dari tipe data itu sendiri adalah suatu memori pada komputer yang dig
 ### numbers
 ```dart
  int angka = 9; // tipedata angka
+  var angka = 9; // tipedata angka, untuk var dapat digunakan semua tipe data
  double dobel = 2.5; // // tipedata double
  int satu = int.parse('1'); //mengubah string ke integer
  double dobel2 = double.parse('2.6'); //merubah string ke double
  double gantiDobel2 = 2.89988777.toStringAsFixed(2); //dari dobel ke string dibulatkan biasanya untuk mata uang
 ```
 ### strings
+- untuk tipe data string penggunaanya diapit oleh tanda petik ' atau " 
+- untuk memasukkan tanda " ,' atau enter menggunakan backslash \ 
+- untuk menulis beberapa baris menggunakan """ atau '''
+
+```dart
+var kalimat1 = 'ini adalah kalimat panjang \" ok \n  ini baris kedua ya'; // contoh penggunaan backslah 
+var kalimatnya = ''' 
+      ini baris pertama
+      ini baris kedua
+      ini baris ketiga '''; // contoh penggunaan ''' , hasilnya akan menjadi tiga baris
+```
+
 ### booleans
 ### runes
 ### symbols
