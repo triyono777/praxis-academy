@@ -57,7 +57,7 @@ Pengertian dari tipe data itu sendiri adalah suatu memori pada komputer yang dig
 ```
 ### strings
 - untuk tipe data string penggunaanya diapit oleh tanda petik ' atau " 
-- untuk memasukkan tanda " ,' atau enter menggunakan backslash \ 
+- untuk memasukkan tanda " ,' atau n (untuk enter) menggunakan backslash \ (misal \" , \n)
 - untuk menulis beberapa baris menggunakan """ atau '''
 
 ```dart
@@ -66,11 +66,36 @@ var kalimatnya = '''
       ini baris pertama
       ini baris kedua
       ini baris ketiga '''; // contoh penggunaan ''' , hasilnya akan menjadi tiga baris
+      
+var besarsemua = 'ini besar'.toUpperCase(); // menjadi besar semua
+var kecil = 'iNi Kecil SEmua'.toLowerCase(); // menjadi kecil semua
+var namaKosong = '';
+print(namaKosong.isEmpty); // untuk mengecek nilainya kosong atau tidak, hasilnya true/false
+
+        
 ```
 
+
 ### booleans
+**booleans** adalah tipe data yang kembalianya berupa true atau false 
+```dart
+bool cekFile = true; // hasil dari variabel cek File adalah true
+```
 ### runes
+untuk menambahkan icon-icon , spesial code , dan karakter uniq lainya
+```dart
+var tepukTangan = '{1f44f}'; // hasilnya erupa icon tepuk tangan
+var kumpulanRunes = Runes( '\u2665  \u{1f605}  \u{1f60e}  \u{1f47b}  \u{1f596}  \u{1f44d} '); // beberapa contoh Rune 
+```
+![Hasil](img/rune.png) 
+
 ### symbols
+untuk memberi symbol
+```dart
+ var iniSimbol = #iniAdalahSimbol;
+ print(iniSimbol);
+```
+![Hasil](img/simbol.png) 
 
 ## 5. fungsi / function
 ## 6. Operator
