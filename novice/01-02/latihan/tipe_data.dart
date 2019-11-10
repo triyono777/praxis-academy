@@ -29,6 +29,12 @@ main() {
   /*untuk memasukkan petik ' atau " dalam string gunakan backslash "\" 
        atau \n untuk enter
       */
+
+  var kalimatnya = ''' 
+      ini baris pertama
+      ini baris kedua
+      ini baris ketiga ''';
+  print(kalimatnya);
   var besarsemua = 'ini besar'.toUpperCase();
   assert(besarsemua == 'INI BESAR');
   var kecil = 'iNi Kecil SEmua'.toLowerCase();
