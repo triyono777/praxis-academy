@@ -34,7 +34,7 @@ part 1 selesai
 ## Mulai coding
 ### Langkah 1: Menampilkan Hello World
 1. menghapus semua isi file pada *lib/main.dart* dan diganti dengan code dibawah ini:
-      ```dart
+```dart
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -54,13 +54,26 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}```
+}
+```
 
    2. Simpan lalu Run aplikasi (F5) hasilnya akan seperti ini
 
 <img src='images/helloWorld.jpeg'>
 
-## Langkah 2: menggunakan *package*
+## Langkah 2: menggunakan *package* external
+pada langkah ini kita akan menggunakan library/package bernama <a href='https://pub.dev/packages/english_words'>english_words</a>
+yang berisi kata-kata dalam bahasa inggris
+1. buka file [pubspec.yaml](pubspec.yaml) dan tambahkan `english_words: any` 
+   - dengan menggunakan `any` akan mengambil update terbaru dari paket tersebut 
+   - untuk penulisannya harus tepat sejajar kebawah dengan `cupertino_icons: ^0.1.2`
+   seperti pada gambar:
+   <img src='images/sejajar.jpeg'>
+2. lalu simpan maka flutter akan meng-*update* package , 
+   - apabila tidak terupdate otomatis dapat dilakukan manual (pada VSCODE) dengan **CTRL+shift+P** lalu cari **Flutter: Upgrade Packages**
+   - atau dengan terminal `flutter pub get` atau `flutter pub upgrade` 
+
+   
 
 
 
