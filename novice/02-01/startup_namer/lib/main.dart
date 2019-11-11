@@ -1,18 +1,18 @@
-import 'package:english_words/english_words.dart' as prefix0;
+import 'package:english_words/english_words.dart' as kumpulanKata;
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  // const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final pasanganKata_kata = WordPair.random();
+    // final pasanganKata_kata = kumpulanKata.WordPair.random();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Welcome to Flutter',
+      title: 'Startup Name Generator',
+      theme: ThemeData(primaryColor: Colors.white),
       home: Scaffold(
         body: Center(child: RandomWords()),
       ),
@@ -26,13 +26,23 @@ class RandomWords extends StatefulWidget {
 }
 
 class _RandomWordsState extends State<RandomWords> {
-  final _suggestions = <WordPair>[];
+  final _suggestions = <kumpulanKata.WordPair>[];
   final _biggerFont = const TextStyle(fontSize: 18.0);
+  final _tersimpan = Set<kumpulanKata.WordPair>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.bookmark,
+              color: Colors.grey,
+            ),
+            onPressed: _tekanSimpan,
+          )
+        ],
       ),
       body: _buildSuggestions(),
     );
@@ -45,19 +55,60 @@ class _RandomWordsState extends State<RandomWords> {
         if (i.isOdd) return Divider();
         final index = i ~/ 2;
         if (index >= _suggestions.length) {
-          _suggestions.addAll(generateWordPairs().take(10));
+          _suggestions.addAll(kumpulanKata.generateWordPairs().take(2));
         }
         return _buildRow(_suggestions[index]);
       },
     );
   }
 
-  Widget _buildRow(WordPair pair) {
+  Widget _buildRow(kumpulanKata.WordPair pasangan) {
+    final bool sudahDisimpan = _tersimpan.contains(pasangan);
     return ListTile(
       title: Text(
-        pair.asPascalCase,
+        pasangan.asPascalCase,
         style: _biggerFont,
       ),
+      trailing: /**trailing menampilkan icon setelah judul/teks */
+          Icon(
+        sudahDisimpan ? Icons.favorite : Icons.favorite_border,
+        color: sudahDisimpan ? Colors.red : null,
+      ),
+      onTap: () {
+        setState(() {
+          if (sudahDisimpan) {
+            _tersimpan.remove(pasangan);
+          } else {
+            _tersimpan.add(pasangan);
+          }
+        });
+      },
     );
+  }
+
+  _tekanSimpan() {
+    Navigator.of(context)
+        .push(MaterialPageRoute<void>(builder: (BuildContext contex) {
+      final Iterable<ListTile> tiles =
+          _tersimpan.map((kumpulanKata.WordPair pasangan) {
+        return ListTile(
+          title: Text(
+            pasangan.asPascalCase,
+            style: _biggerFont,
+          ),
+        );
+      });
+      final divided =
+          ListTile.divideTiles(context: context, tiles: tiles).toList();
+
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Saran kata disimpan'),
+        ),
+        body: ListView(
+          children: divided,
+        ),
+      );
+    }));
   }
 }
