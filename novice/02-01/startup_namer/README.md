@@ -72,6 +72,50 @@ yang berisi kata-kata dalam bahasa inggris
 2. lalu simpan maka flutter akan meng-*update* package , 
    - apabila tidak terupdate otomatis dapat dilakukan manual (pada VSCODE) dengan **CTRL+shift+P** lalu cari **Flutter: Upgrade Packages**
    - atau dengan terminal `flutter pub get` atau `flutter pub upgrade` 
+3. setelah upgrade package selesai, import ke [lib/main.dart](lib/main.dart)
+```dart
+//...
+import 'package:english_words/english_words.dart';
+```
+atau menggunakan variabel ganti memakai **as**
+```dart
+//...
+import 'package:english_words/english_words.dart' as kumpulanKata;
+```
+4. menggunakan package `english_words` pada [lib/main.dart](lib/main.dart) 
+  - membuat variabel untuk fungsi `random()` dari package `english_words` didalam *class* **MyApp** 
+```dart
+class MyApp extends StatelessWidget {
+  final pasangankata = kumpulanKata.WordPair.random(); 
+
+```
+  - lalu ganti `Text('Hello World')` menjadi `Text(pasangankata.asPascalCase)`   ,*asPascalCase* adalah salal satu fungsi yg ada di package `english_words`
+### Coding lengkapnya
+```dart
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart' as kumpulanKata;
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+ final pasangankata = kumpulanKata.WordPair.random(); 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to Flutter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: Text(pasangankata.asPascalCase),
+        ),
+      ),
+    );
+  }
+}
+```
 
    
 
