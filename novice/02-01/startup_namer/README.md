@@ -34,7 +34,7 @@ part 1 selesai
 ## Mulai coding
 ### Langkah 1: Menampilkan Hello World
 1. menghapus semua isi file pada *lib/main.dart* dan diganti dengan code dibawah ini:
-      ```dart
+```dart
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -54,7 +54,8 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}```
+}
+```
 
    2. Simpan lalu Run aplikasi (F5) hasilnya akan seperti ini
 
