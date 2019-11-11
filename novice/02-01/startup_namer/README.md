@@ -72,8 +72,116 @@ yang berisi kata-kata dalam bahasa inggris
 2. lalu simpan maka flutter akan meng-*update* package , 
    - apabila tidak terupdate otomatis dapat dilakukan manual (pada VSCODE) dengan **CTRL+shift+P** lalu cari **Flutter: Upgrade Packages**
    - atau dengan terminal `flutter pub get` atau `flutter pub upgrade` 
+   - sampai muncul di konsole atau terminal 
+```sh
+flutter packages get
+Running "flutter packages get" in startup_namer...
+Process finished with exit code 0
+```
+3. setelah upgrade package selesai, import ke [lib/main.dart](lib/main.dart)
+```dart
+//...
+import 'package:english_words/english_words.dart';
+```
+atau menggunakan variabel ganti memakai ' **as nama_variabel** '
+```dart
+//...
+import 'package:english_words/english_words.dart' as kumpulanKata;
+```
+4. menggunakan package `english_words` pada [lib/main.dart](lib/main.dart) 
+  - membuat variabel untuk fungsi `random()` dari package `english_words` didalam *class* **MyApp** 
+```dart
+class MyApp extends StatelessWidget {
+  final pasangankata = kumpulanKata.WordPair.random(); 
 
-   
+```
+  - lalu ganti `Text('Hello World')` menjadi `Text(pasangankata.asPascalCase)`   ,*asPascalCase* adalah salah satu fungsi yg ada di package `english_words`
+### Coding lengkapnya
+```dart
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart' as kumpulanKata; // tambahkan baris ini
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+ final pasangankata = kumpulanKata.WordPair.random(); // tambahkan baris ini
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to Flutter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: Text(pasangankata.asPascalCase), // tambahkan baris ini
+        ),
+      ),
+    );
+  }
+}
+```
+simpan lalu hot reload atau **F5**
+Hasilnya : 
+[hasil](gambar/sample.png)
+Text `Hello world` berganti menjadi text random yang diambil dari package `english_words`
+
+## langkah 3: menambahkan class Statefull widget 
+Perbedaan **Statefull widget** dan **Stateless widget**
+**Statefull widget** : semua komponen didalamnya **dapat** diubah/dinamis
+**Stateless widget** : semua komponen didalamnya **tidak dapat** diubah/dinamis
+
+1. untuk membuat statefull widget agar lebih mudah gunakan shortcut `stf` lalu enter dan masukkan nama dari class-nya misal `KataAcak`
+   - buat lah dibawah dari class **MyApp**
+   - ketik `stf` lalu **enter** akan mucul 4 kursor, isikan nama misal `KataAcak`
+  
+```dart
+class KataAcak extends StatefulWidget {
+  @override
+  _KataAcakState createState() => _KataAcakState();
+}
+
+class _KataAcakState extends State<KataAcak> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
+  }
+}
+```
+2. ubah class **_KataAcakState** menjadi
+```dart
+class _KataAcakState extends State<KataAcak> {
+  @override
+  Widget build(BuildContext context) {
+    final pasangankata = kumpulanKata.WordPair.random();
+    return Text(pasangankata.asPascalCase);
+  }
+}
+```
+3. simpan lalu Hot reload (**F5**) , hasilnya akan sama seperti sebelumnya namun yang berbeda adalah komponen didalamnya kita sudah menggunakan statfull widget
+
+## langkah 4. membuat infinite scrolling ListView 
+pada langkah ini kita akan membuat scroll List tanpa batas
+
+1. kita buat dulu variabel untuk menyimpan **List** nya dan juga untuk dan juga untuk ukuran font nya , agar code kita lebih re-usable/ dipakai ulang
+  - tambahkan pada `class _KataAcakState`
+```dart
+class _KataAcakState extends State<KataAcak> {
+  @override
+  Widget build(BuildContext context) {
+// tambahkan dua baris kode ini
+    final _saranKata = <KataAcak>[];
+    final _ukuranFont = const TextStyle(fontSize: 18);
+
+  ...
+  }
+}
+
+```
+
 
 
 

@@ -51,7 +51,7 @@ class _RandomWordsState extends State<RandomWords> {
   Widget _buildSuggestions() {
     return ListView.builder(
       padding: const EdgeInsets.all(16.0),
-      itemBuilder: (context, i) {
+      itemBuilder: (BuildContext context, int i) {
         if (i.isOdd) return Divider();
         final index = i ~/ 2;
         if (index >= _suggestions.length) {
@@ -110,5 +110,20 @@ class _RandomWordsState extends State<RandomWords> {
         ),
       );
     }));
+  }
+}
+
+class KataAcak extends StatefulWidget {
+  @override
+  _KataAcakState createState() => _KataAcakState();
+}
+
+class _KataAcakState extends State<KataAcak> {
+  @override
+  Widget build(BuildContext context) {
+    final _saranKata = <KataAcak>[];
+    final _ukuranFont = const TextStyle(fontSize: 18);
+    final pasangankata = kumpulanKata.WordPair.random();
+    return Text(pasangankata.asPascalCase);
   }
 }
