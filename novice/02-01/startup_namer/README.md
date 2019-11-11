@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
+}```
 
    2. Simpan lalu Run aplikasi (F5) hasilnya akan seperti ini
 
