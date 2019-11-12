@@ -3,8 +3,11 @@ import 'button_stateFull.dart';
 
 void main() {
   runApp(MaterialApp(
-    // home: MyAppStatelessWidget(),
-    home: ButtonKeren(),
+    home: MyAppStatelessWidget(),
+    routes: <String, WidgetBuilder>{
+      '/statefull': (BuildContext context) => ButtonKeren()
+    },
+    // home: ButtonKeren(),
   ));
 }
 
@@ -50,6 +53,11 @@ class MyAppStatelessWidget extends StatelessWidget {
                   size: 40.0,
                   color: Colors.pink,
                 )),
+            MyButton(
+              iconnya: Icon(Icons.label_important),
+              routing: '/statefull',
+              label: 'statefull',
+            )
           ],
         ),
       ),
@@ -73,6 +81,34 @@ class MyKartu extends StatelessWidget {
             children: <Widget>[this.judul, this.icon],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class MyButton extends StatelessWidget {
+  var routing;
+  Icon iconnya;
+  var label;
+
+  MyButton({this.routing, this.iconnya, this.label});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(bottom: 10.0),
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            icon: iconnya,
+            onPressed: () {
+              Navigator.of(context).pushNamed(routing);
+            },
+          ),
+          Text(
+            label,
+            style: TextStyle(fontSize: 20.0),
+          )
+        ],
       ),
     );
   }
