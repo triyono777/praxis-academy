@@ -5,6 +5,7 @@ void main() {
     title: 'Aplikasi ku',
     // home: ScaffoldBaru(),
     home: RumahTutorial(),
+    // home: ButtonKu(),
   ));
 }
 
@@ -15,6 +16,7 @@ class AppBarbaru extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // Container sebuah layout untuk membungkus
       height: 56.0, // 56.0 ini dalaha dalam satuan pixel dan bertipe double
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(
@@ -68,27 +70,52 @@ class RumahTutorial extends StatelessWidget {
   Widget build(BuildContext context) {
     // scaffold adalah layout Utama untuk komponen Material App
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: null,
-          tooltip: 'Nav menu',
-        ),
-        title: Text('contoh judulnya'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
             onPressed: null,
-            tooltip: 'Cari',
-          )
-        ],
-      ),
-      body: Center(
-        child: Text('Hello dunia'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        tooltip: 'Tambah',
-        onPressed: null,
+            tooltip: 'Nav menu',
+          ),
+          title: Text('contoh judulnya'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: null,
+              tooltip: 'Cari',
+            )
+          ],
+        ),
+        body: Container(
+          child: Column(
+            children: <Widget>[Text('hallo'), ButtonKu()],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          tooltip: 'tambah',
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('floating di pencet');
+          },
+        ));
+  }
+}
+
+class ButtonKu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print('button di pencet');
+      },
+      child: Container(
+        height: 36.0,
+        margin: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5.0), color: Colors.lightGreen),
+        child: Center(
+          child: Text('Tombol'),
+        ),
       ),
     );
   }
