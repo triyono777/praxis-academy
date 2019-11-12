@@ -89,7 +89,12 @@ class RumahTutorial extends StatelessWidget {
         ),
         body: Container(
           child: Column(
-            children: <Widget>[Text('hallo'), ButtonKu(), Penghitung()],
+            children: <Widget>[
+              Text('hallo'),
+              ButtonKu(),
+              Penghitung(),
+              Hitung55()
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -124,6 +129,7 @@ class ButtonKu extends StatelessWidget {
   }
 }
 
+// ###### membuat statefull##############
 class Penghitung extends StatefulWidget {
   @override
   _PenghitungState createState() => _PenghitungState();
@@ -136,7 +142,8 @@ class _PenghitungState extends State<Penghitung> {
     return Row(
       children: <Widget>[
         RaisedButton(
-          onPressed: _tambahHitungan,
+          onPressed:
+              _tambahHitungan, // untuka memanggil suatu fungsi yang sudah didefinisikan tidak menggunakan tnda ()
           child: Text('Bertambah'),
         ),
         Text('Hitungan: $_hitung')
@@ -151,14 +158,53 @@ class _PenghitungState extends State<Penghitung> {
   }
 }
 
-// class TampilHituung extends StatelessWidget {
-//   final hitung;
-//   TampilHituung({this.hitung});
+// ######### menggabungkan beberapa stateless dan state full ##############
+class TampilHitung55 extends StatelessWidget {
+  final hitung;
+  TampilHitung55({this.hitung});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Text('Hitung: $hitung'
+  @override
+  Widget build(BuildContext context) {
+    return Text('Hitung: $hitung');
+  }
+}
 
-//     );
-//   }
-// }
+class PenambahHitung55 extends StatelessWidget {
+  final VoidCallback saatDipencet;
+  PenambahHitung55({this.saatDipencet});
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: saatDipencet,
+      child: Text('Hitungan nambah'),
+    );
+  }
+}
+
+class Hitung55 extends StatefulWidget {
+  @override
+  _Hitung55State createState() => _Hitung55State();
+}
+
+class _Hitung55State extends State<Hitung55> {
+  var _hitungan55 = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        PenambahHitung55(
+          saatDipencet: _hitunganNambah,
+        ),
+        TampilHitung55(
+          hitung: _hitungan55,
+        )
+      ],
+    );
+  }
+
+  _hitunganNambah() {
+    setState(() {
+      ++_hitungan55;
+    });
+  }
+}
