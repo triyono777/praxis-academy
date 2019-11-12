@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RoutingDenganSTF extends StatelessWidget {
+class RoutingDenganSTF extends StatefulWidget {
+  @override
+  _RoutingDenganSTFState createState() => _RoutingDenganSTFState();
+}
+
+class _RoutingDenganSTFState extends State<RoutingDenganSTF> {
   @override
   Widget build(BuildContext context) {
     var namaRoute = <String, WidgetBuilder>{
@@ -9,10 +14,11 @@ class RoutingDenganSTF extends StatelessWidget {
           )
     };
     return MaterialApp(
+      // MaterialApp tidak ada tombol back
       title: 'Demo Route',
       theme: ThemeData(primaryColor: Colors.blue),
       home: Homepage(
-        judul: 'Demo Homepage',
+        judul: 'Demo Homepage zzz',
       ),
       routes: namaRoute,
     );
@@ -33,6 +39,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     // var tombol = IconButton(icon: Icon(Icons.access_alarm)onPressed:,);
     return Scaffold(
+      // Scaffold ada tombol back
       appBar: AppBar(
         title: Text(widget.judul),
       ),
@@ -66,10 +73,10 @@ class HomePageItems extends StatefulWidget {
 class _HomePageItemsState extends State<HomePageItems> {
   @override
   Widget build(BuildContext context) {
-    var tombol = IconButton(
-      icon: Icon(Icons.arrow_back),
-      onPressed: _buttonDiPencet,
-    );
+    // var tombol = IconButton(
+    //   icon: Icon(Icons.donut_small),
+    //   //onPressed: _buttonDiPencet,
+    // );
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.judul),
@@ -80,11 +87,11 @@ class _HomePageItemsState extends State<HomePageItems> {
           children: <Widget>[
             Text('item satu'),
             Text('item dua'),
-            Center(
-              child: Row(
-                children: <Widget>[tombol, Text('kembali ke home page')],
-              ),
-            )
+            // Center(
+            //   child: Row(
+            //     children: <Widget>[tombol, Text('kembali ke home page')],
+            //   ),
+            // )
           ],
         ),
       ),
@@ -98,7 +105,8 @@ class _HomePageItemsState extends State<HomePageItems> {
 
   _floatingButtonDiPencet() {}
 
-  _buttonDiPencet() {
-    Navigator.pop(context);
-  }
+  // _buttonDiPencet() {
+  //   Navigator.pop(context);
+  //   // Navigator.of(context).pushNamed('/ItemNoSatu');
+  // }
 }
