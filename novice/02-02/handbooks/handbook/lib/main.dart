@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'button_stateFull.dart';
+import 'route_stfull.dart';
 
 void main() {
   runApp(MaterialApp(
     home: MyAppStatelessWidget(),
     routes: <String, WidgetBuilder>{
-      '/statefull': (BuildContext context) => ButtonKeren()
+      '/statefull': (BuildContext context) => ButtonKeren(),
+      '/routestatefull': (BuildContext context) => RoutingDenganSTF()
     },
     // home: ButtonKeren(),
   ));
@@ -57,7 +59,12 @@ class MyAppStatelessWidget extends StatelessWidget {
               iconnya: Icon(Icons.label_important),
               routing: '/statefull',
               label: 'statefull',
-            )
+            ),
+            MyButton(
+              iconnya: Icon(Icons.label_important),
+              routing: '/routestatefull',
+              label: 'route statefull',
+            ),
           ],
         ),
       ),

@@ -265,7 +265,8 @@ class DaftarBelanjaanItem extends StatelessWidget {
 }
 
 class DaftarBelanja extends StatefulWidget {
-  DaftarBelanja({Key key, this.produks}) : super(key: key);
+  DaftarBelanja({Key key, this.produks})
+      : super(key: key); // super key disini buat apa??
   final List<Produk> produks;
   @override
   _DaftarBelanjaState createState() => _DaftarBelanjaState();
