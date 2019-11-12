@@ -65,6 +65,8 @@ class ScaffoldBaru extends StatelessWidget {
   }
 }
 
+// ######### Material ####################
+
 class RumahTutorial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -87,7 +89,7 @@ class RumahTutorial extends StatelessWidget {
         ),
         body: Container(
           child: Column(
-            children: <Widget>[Text('hallo'), ButtonKu()],
+            children: <Widget>[Text('hallo'), ButtonKu(), Penghitung()],
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -100,6 +102,7 @@ class RumahTutorial extends StatelessWidget {
   }
 }
 
+// ######### Gesture ####################
 class ButtonKu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -120,3 +123,42 @@ class ButtonKu extends StatelessWidget {
     );
   }
 }
+
+class Penghitung extends StatefulWidget {
+  @override
+  _PenghitungState createState() => _PenghitungState();
+}
+
+class _PenghitungState extends State<Penghitung> {
+  var _hitung = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        RaisedButton(
+          onPressed: _tambahHitungan,
+          child: Text('Bertambah'),
+        ),
+        Text('Hitungan: $_hitung')
+      ],
+    );
+  }
+
+  _tambahHitungan() {
+    setState(() {
+      _hitung++;
+    });
+  }
+}
+
+// class TampilHituung extends StatelessWidget {
+//   final hitung;
+//   TampilHituung({this.hitung});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text('Hitung: $hitung'
+
+//     );
+//   }
+// }
