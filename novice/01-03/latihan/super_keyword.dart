@@ -1,20 +1,22 @@
 main() {
-  Child c = Child();
-  c.m1(98);
+  Anak anaknya = Anak();
+  anaknya.pesan('ini pesan dari anaknya ');
 }
 
-class Parent {
-  var pesan = 'ini adalah pesan dari class parent';
-  m1(var a) {
-    print('nilai dari ${a}');
+class Orangtua {
+  var isi_pesan_ortu_asli = 'ini adalah pesan dari class Orangtua asli';
+  pesan(var isiPesanA) {
+    print('ortu: ${isiPesanA}');
   }
 }
 
-class Child extends Parent {
+class Anak extends Orangtua {
   @override
-  m1(var b) {
-    print('nilai dari b ${b}');
-    super.m1(49);
-    print('${super.pesan}');
+  pesan(var isipesanB) {
+    // pesan merupakan fungsi yg harus ada , karena meng extend OrangTua
+    print('anak: ${isipesanB}'); // isi fungsi yg dibuat di anak
+    super.pesan(
+        'pesan ini dari ortu'); // cara mengakses fungsi pesan pada class orangTua
+    print('${isi_pesan_ortu_asli}'); // mengakses variabel dari class orangtua
   }
 }

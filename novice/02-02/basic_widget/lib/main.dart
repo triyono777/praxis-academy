@@ -4,8 +4,15 @@ void main() {
   runApp(MaterialApp(
     title: 'Aplikasi ku',
     // home: ScaffoldBaru(),
-    home: RumahTutorial(),
+    // home: RumahTutorial(),
     // home: ButtonKu(),
+    home: DaftarBelanja(
+      produks: <Produk>[
+        Produk(nama: 'telur'),
+        Produk(nama: 'minyak'),
+        Produk(nama: 'garam'),
+      ],
+    ),
   ));
 }
 
@@ -93,7 +100,7 @@ class RumahTutorial extends StatelessWidget {
               Text('hallo'),
               ButtonKu(),
               Penghitung(),
-              Hitung55()
+              Hitung55(),
             ],
           ),
         ),
@@ -205,6 +212,91 @@ class _Hitung55State extends State<Hitung55> {
   _hitunganNambah() {
     setState(() {
       ++_hitungan55;
+    });
+  }
+}
+
+// ############## menggabungkan semua  (kasus Keranjang Belanja) ##############
+
+class Produk {
+  final nama;
+  const Produk({this.nama});
+}
+
+typedef KeranjangBerubahCallback(Produk produk, bool dalamKeranjang);
+
+class DaftarBelanjaanItem extends StatelessWidget {
+  final Produk produk;
+  final bool dalamKeranjang;
+  final KeranjangBerubahCallback keranjangBerubah;
+  DaftarBelanjaanItem(
+      {Produk produk, this.keranjangBerubah, this.dalamKeranjang})
+      : produk = produk,
+        super(key: ObjectKey(produk));
+  Color _getWarna(BuildContext context) {
+    return dalamKeranjang ? Colors.black54 : Theme.of(context).primaryColor;
+  }
+
+  TextStyle _getTextStyle(BuildContext context) {
+    if (!dalamKeranjang) return null;
+
+    return TextStyle(
+      color: Colors.black54,
+      decoration: TextDecoration.lineThrough,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      onTap: () {
+        keranjangBerubah(produk, dalamKeranjang);
+      },
+      leading: CircleAvatar(
+        backgroundColor: _getWarna(context),
+        child: Text(produk.nama[0]),
+      ),
+      title: Text(
+        produk.nama,
+        style: _getTextStyle(context),
+      ),
+    );
+  }
+}
+
+class DaftarBelanja extends StatefulWidget {
+  DaftarBelanja({Key key, this.produks}) : super(key: key);
+  final List<Produk> produks;
+  @override
+  _DaftarBelanjaState createState() => _DaftarBelanjaState();
+}
+
+class _DaftarBelanjaState extends State<DaftarBelanja> {
+  var _keranjangBelanja = Set<Produk>();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Daftar Belanja'),
+      ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(vertical: 8.0),
+        children: widget.produks.map((Produk produk) {
+          return DaftarBelanjaanItem(
+              produk: produk,
+              dalamKeranjang: _keranjangBelanja.contains(produk),
+              keranjangBerubah: _handleKeranjangBerubah);
+        }).toList(),
+      ),
+    );
+  }
+
+  _handleKeranjangBerubah(Produk produk, bool dalamKeranjang) {
+    setState(() {
+      if (!dalamKeranjang)
+        _keranjangBelanja.add(produk);
+      else
+        _keranjangBelanja.remove(produk);
     });
   }
 }
