@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Aplikasi ku',
-    home: ScaffoldBaru(),
+    // home: ScaffoldBaru(),
+    home: RumahTutorial(),
   ));
 }
 
@@ -51,12 +52,43 @@ class ScaffoldBaru extends StatelessWidget {
               style: Theme.of(context).primaryTextTheme.title,
             ),
           ),
-          // Expanded(
-          //   child: Center(
-          //     child: Text('Hello worlds'),
-          //   ),
-          // )
+          Expanded(
+            child: Center(
+              child: Text('Hello worlds'),
+            ),
+          )
         ],
+      ),
+    );
+  }
+}
+
+class RumahTutorial extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // scaffold adalah layout Utama untuk komponen Material App
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: null,
+          tooltip: 'Nav menu',
+        ),
+        title: Text('contoh judulnya'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: null,
+            tooltip: 'Cari',
+          )
+        ],
+      ),
+      body: Center(
+        child: Text('Hello dunia'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        tooltip: 'Tambah',
+        onPressed: null,
       ),
     );
   }
