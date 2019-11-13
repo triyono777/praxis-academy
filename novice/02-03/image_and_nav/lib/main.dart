@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'latihan_routing.dart';
+import 'latihan_routing_biasa.dart';
 
 void main() => runApp(HeroApp());
 
@@ -9,6 +9,7 @@ class HeroApp extends StatelessWidget {
     return MaterialApp(
       title: 'Transition Demo',
       home: MainScreen(),
+      initialRoute: '/', // untuk route kehome
       routes: <String, WidgetBuilder>{
         '/pertama': (BuildContext context) => FirstRoute(),
         '/kedua': (BuildContext context) => SecondRoute(),
@@ -50,16 +51,16 @@ class MainScreen extends StatelessWidget {
                         Hero(
                             tag: 'imageHero2',
                             child: Image.asset('images/nami.jpg')),
-                        Hero(
-                            tag: 'imageHero3',
-                            child: Image.asset('images/choper.jpg')),
+                        // Hero(
+                        //     tag: 'imageHero3',
+                        //     child: Image.asset('images/choper`.jpg')),
                       ],
                     ),
                   ),
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      // MaterialPageRoute(builder: (BuildContext context)
+                      // MaterialPageRoute(builder: (BuildContext _)
                       MaterialPageRoute(builder: (_) {
                     return DetailScreen();
                   }));
@@ -93,8 +94,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         child: Center(
-          child:
-              Hero(tag: 'imageHero', child: Image.asset('images/luffy.jpeg')),
+          child: Hero(tag: 'imageHero', child: Image.asset('images/zoro.jpg')),
         ),
         onTap: () {
           Navigator.pop(context);
