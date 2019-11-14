@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'logo_flutter.dart';
+import 'package:latihan_animasi/staggered2.dart' as prefix0;
+
 import 'heroOp.dart';
 import 'grid.dart';
 import 'animated_container.dart';
 import 'pesawat.dart';
+import 'staggered_animasi.dart';
+import 'staggered2.dart';
 
 void main() => runApp(HeroApp());
 
@@ -19,6 +22,8 @@ class HeroApp extends StatelessWidget {
         '/kedua': (BuildContext context) => GridApp(),
         '/ketiga': (BuildContext context) => AnimasiBesarKecil(),
         '/keempat': (BuildContext context) => FlightExample(),
+        '/kelima': (BuildContext context) => prefix0.StaggerDemo(),
+        '/keenam': (BuildContext context) => StaggerAnimation2(),
       },
     );
   }
@@ -61,6 +66,16 @@ class MainScreen extends StatelessWidget {
                 label: 'air plane',
                 iconnya: Icon(Icons.airplanemode_active),
                 routing: '/keempat',
+              ),
+              MyButton(
+                label: 'Stagered',
+                iconnya: Icon(Icons.view_quilt),
+                routing: '/kelima',
+              ),
+              MyButton(
+                label: 'Stagered2',
+                iconnya: Icon(Icons.translate),
+                routing: '/keenam',
               ),
             ],
           ),

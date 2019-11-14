@@ -221,7 +221,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ],
               ),
-              KumpulanAnim(kurva: Curves.easeIn),
+              // KumpulanAnim(kurva: Curves.easeIn),
 
               // KumpulanAnim(
               //    kurva2 = kurva;
@@ -236,47 +236,47 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 }
 
-class KumpulanAnim extends StatefulWidget {
-  var kurva;
+// class KumpulanAnim extends StatefulWidget {
+//   var kurva;
 
-  KumpulanAnim({this.kurva});
-  @override
-  _KumpulanAnimState createState() => _KumpulanAnimState();
-}
+//   KumpulanAnim({this.kurva});
+//   @override
+//   _KumpulanAnimState createState() => _KumpulanAnimState();
+// }
 
-class _KumpulanAnimState extends State<KumpulanAnim> {
-  bool selected4 = true;
-  var kurva;
-  _KumpulanAnimState({this.kurva});
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Center(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                selected4 = !selected4;
-              });
-            },
-            child: AnimatedContainer(
-              width: selected4 ? 200.0 : 100.0,
-              height: selected4 ? 100.0 : 200.0,
-              color: selected4 ? Colors.red[700] : Colors.green[500],
-              alignment:
-                  selected4 ? Alignment.center : AlignmentDirectional.topCenter,
-              duration: Duration(seconds: 2),
-              curve: kurva ?? Curves.bounceInOut,
-              // curve: Curves.elasticIn,
-              child: FlutterLogo(size: 75),
-            ),
-          ),
-        ),
-        Text(
-          kurva.toString(),
-          style: TextStyle(fontSize: 20),
-        ),
-      ],
-    );
-  }
-}
+// class _KumpulanAnimState extends State<KumpulanAnim> {
+//   bool selected4 = true;
+//   var kurva;
+//   _KumpulanAnimState({this.kurva});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: <Widget>[
+//         Center(
+//           child: GestureDetector(
+//             onTap: () {
+//               setState(() {
+//                 selected4 = !selected4;
+//               });
+//             },
+//             child: AnimatedContainer(
+//               width: selected4 ? 200.0 : 100.0,
+//               height: selected4 ? 100.0 : 200.0,
+//               color: selected4 ? Colors.red[700] : Colors.green[500],
+//               alignment:
+//                   selected4 ? Alignment.center : AlignmentDirectional.topCenter,
+//               duration: Duration(seconds: 2),
+//               curve: kurva ?? Curves.bounceInOut,
+//               // curve: Curves.elasticIn,
+//               child: FlutterLogo(size: 75),
+//             ),
+//           ),
+//         ),
+//         Text(
+//           kurva.toString(),
+//           style: TextStyle(fontSize: 20),
+//         ),
+//       ],
+//     );
+//   }
+// }
