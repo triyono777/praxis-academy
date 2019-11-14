@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'logo_flutter.dart';
 import 'heroOp.dart';
 import 'grid.dart';
+import 'animated_container.dart';
+import 'pesawat.dart';
 
 void main() => runApp(HeroApp());
 
@@ -15,6 +17,8 @@ class HeroApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/pertama': (BuildContext context) => MyApp(),
         '/kedua': (BuildContext context) => GridApp(),
+        '/ketiga': (BuildContext context) => AnimasiBesarKecil(),
+        '/keempat': (BuildContext context) => FlightExample(),
       },
     );
   }
@@ -49,8 +53,14 @@ class MainScreen extends StatelessWidget {
                 routing: '/kedua',
               ),
               MyButton(
-                label: 'button tiga',
+                label: 'animated_container',
                 iconnya: Icon(Icons.work),
+                routing: '/ketiga',
+              ),
+              MyButton(
+                label: 'air plane',
+                iconnya: Icon(Icons.airplanemode_active),
+                routing: '/keempat',
               ),
             ],
           ),
