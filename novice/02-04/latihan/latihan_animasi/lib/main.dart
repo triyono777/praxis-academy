@@ -1,45 +1,96 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/animation.dart';
+import 'logo_flutter.dart';
+import 'heroOp.dart';
+import 'grid.dart';
 
-void main() => runApp(LogoApp());
+void main() => runApp(HeroApp());
 
-class LogoApp extends StatefulWidget {
-  _LogoAppState createState() => _LogoAppState();
+class HeroApp extends StatelessWidget {
+  @override
+  Widget build(_) {
+    return MaterialApp(
+      title: 'Transition Demo',
+      home: MainScreen(),
+      initialRoute: '/', // untuk route kehome
+      routes: <String, WidgetBuilder>{
+        '/pertama': (BuildContext context) => MyApp(),
+        '/kedua': (BuildContext context) => GridApp(),
+      },
+    );
+  }
 }
 
-class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
-
-  @override
-  void initState() {
-    super.initState();
-    controller =
-        AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    animation = Tween<double>(begin: 0, end: 300).animate(controller)
-      ..addListener(() {
-        setState(() {
-          // The state that has changed here is the animation object’s value.
-        });
-      });
-    controller.forward();
-  }
-
+class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
-        height: animation.value,
-        width: animation.value,
-        child: FlutterLogo(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ONE PIECE CREW'),
+      ),
+      body: ListView(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Text(
+                'Crew Member SHP',
+                style: TextStyle(fontSize: 30.0),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+              ),
+              MyButton(
+                label: 'Crew Mugiwara',
+                iconnya: Icon(Icons.web),
+                routing: '/pertama',
+              ),
+              MyButton(
+                label: 'Grid',
+                iconnya: Icon(Icons.whatshot),
+                routing: '/kedua',
+              ),
+              MyButton(
+                label: 'button tiga',
+                iconnya: Icon(Icons.work),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
+}
 
+class MyButton extends StatelessWidget {
+  var routing;
+  Icon iconnya;
+  var label;
+
+  MyButton({this.routing, this.iconnya, this.label});
   @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(bottom: 10.0),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.of(context).pushNamed(routing);
+          print('sudah dipencet');
+        },
+        child: Row(
+          children: <Widget>[
+            IconButton(
+              icon: iconnya,
+              iconSize: 50.0,
+              onPressed: () {
+                Navigator.of(context).pushNamed(routing);
+              },
+            ),
+            Text(
+              label,
+              style: TextStyle(fontSize: 20.0),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

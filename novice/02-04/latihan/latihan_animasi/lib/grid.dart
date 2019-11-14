@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
+class GridApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'hello',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hero'),
+          title: Text('Grid'),
         ),
         body: Container(
           child: Center(
