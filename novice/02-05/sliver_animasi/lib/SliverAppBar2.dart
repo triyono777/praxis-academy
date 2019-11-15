@@ -5,7 +5,7 @@ class SilverAppBarContoh2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.blueAccent),
+      theme: ThemeData(primaryColor: Colors.purple),
       home: Scaffold(
           body: CustomScrollView(
         slivers: <Widget>[
@@ -13,7 +13,7 @@ class SilverAppBarContoh2 extends StatelessWidget {
             pinned: true,
             expandedHeight: 250.0,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('Demo'),
+              title: Text('CustomScrollView'),
               background: Image.network(
                 'https://gunung.id/wp-content/uploads/2018/08/gunung-prau.jpg',
                 fit: BoxFit.cover,

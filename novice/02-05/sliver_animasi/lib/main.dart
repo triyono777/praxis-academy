@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'silverAppBar.dart';
 import 'SliverAppBar2.dart';
+import 'sliverGrid.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/menu1': (BuildContext context) => SilverAppBarContoh(),
         '/menu2': (BuildContext context) => SilverAppBarContoh2(),
+        '/menu3': (BuildContext context) => SliverGridContoh(),
       },
     );
   }
@@ -29,7 +31,6 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: ListView(
           children: <Widget>[
-            Text('Hello'),
             MyButton(
               iconnya: Icon(Icons.ac_unit),
               routing: '/menu1',
@@ -38,7 +39,12 @@ class HomePage extends StatelessWidget {
             MyButton(
               iconnya: Icon(Icons.sentiment_satisfied),
               routing: '/menu2',
-              judul: 'SliverAppBar2',
+              judul: 'CustomScrollView',
+            ),
+            MyButton(
+              iconnya: Icon(Icons.grid_on),
+              routing: '/menu3',
+              judul: 'SliverGrid',
             ),
           ],
         ),
