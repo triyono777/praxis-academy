@@ -3,6 +3,8 @@ import 'silverAppBar.dart';
 import 'SliverAppBar2.dart';
 import 'sliverGrid.dart';
 
+import 'sliverLatihan.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/menu1': (BuildContext context) => SilverAppBarContoh(),
         '/menu2': (BuildContext context) => SilverAppBarContoh2(),
         '/menu3': (BuildContext context) => SliverGridContoh(),
+        '/menu4': (BuildContext context) => LatihanSliver(),
       },
     );
   }
@@ -45,6 +48,11 @@ class HomePage extends StatelessWidget {
               iconnya: Icon(Icons.grid_on),
               routing: '/menu3',
               judul: 'SliverGrid',
+            ),
+            MyButton(
+              iconnya: Icon(Icons.slideshow),
+              routing: '/menu4',
+              judul: 'Latihan Sliver',
             ),
           ],
         ),
