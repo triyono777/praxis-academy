@@ -10,9 +10,11 @@ class LatihanSliver extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
+            // snap: true,
+            floating: true,
             expandedHeight: 100,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text('lat'),
+              title: Text('latihan Sliver appbar'),
             ),
           ),
           SliverGrid(
@@ -30,7 +32,8 @@ class LatihanSliver extends StatelessWidget {
             }, childCount: 16),
           ),
           SliverAppBar(
-            pinned: true,
+            // snap: true,
+            floating: true,
             elevation: 30,
             backgroundColor: Colors.red[300],
             flexibleSpace: FlexibleSpaceBar(
@@ -53,7 +56,14 @@ class LatihanSliver extends StatelessWidget {
           ),
           SliverAppBar(
             pinned: true,
-            title: Text('lime'),
+            // snap: true,
+            // floating: true,
+            elevation: 30,
+            expandedHeight: 200,
+            backgroundColor: Colors.teal[300],
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text('Sliver List doang'),
+            ),
           ),
           SliverList(
             delegate:
@@ -65,7 +75,7 @@ class LatihanSliver extends StatelessWidget {
                 child: Text('lemon ', style: TextStyle(fontSize: 30)),
               );
             }, childCount: 10),
-          )
+          ),
         ],
       )),
     );
