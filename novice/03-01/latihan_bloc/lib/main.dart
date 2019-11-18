@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_bloc/colorBloc.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,6 +9,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  ColorBloc bloc = ColorBloc();
+  @override
+  void dispose() {
+    bloc.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,14 +25,18 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             FloatingActionButton(
               backgroundColor: Colors.amber,
-              onPressed: () {},
+              onPressed: () {
+                bloc.eventSink.add(ColorEvent.to_amber);
+              },
             ),
             SizedBox(
               width: 10,
             ),
             FloatingActionButton(
               backgroundColor: Colors.lightBlue,
-              onPressed: () {},
+              onPressed: () {
+                bloc.eventSink.add(ColorEvent.to_light_blue);
+              },
             ),
           ],
         ),
@@ -32,13 +44,18 @@ class _MyAppState extends State<MyApp> {
           title: Text('Bloc tanpa Library'),
         ),
         body: Center(
-          child: AnimatedContainer(
-            duration: Duration(microseconds: 500),
-            height: 100,
-            width: 100,
-            color: Colors.amber,
-          ),
-        ),
+            child: StreamBuilder(
+          stream: bloc.stateStream,
+          initialData: Colors.amber,
+          builder: (context, snapshot) {
+            return AnimatedContainer(
+              duration: Duration(microseconds: 500),
+              height: 100,
+              width: 100,
+              color: snapshot.data,
+            );
+          },
+        )),
       ),
     );
   }
