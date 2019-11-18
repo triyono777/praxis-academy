@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/menu1': (BuildContext context) => LatihanProvider(),
-        '/menu2': (BuildContext context) => MultiProvider(),
+        '/menu2': (BuildContext context) => LatMultiProvider(),
       },
     );
   }
