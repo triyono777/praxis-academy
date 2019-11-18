@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_provider/aplication_color.dart';
-import 'package:provider/provider.dart';
+import 'lat_provider.dart';
+import 'multi_profider.dart';
 
 main() => runApp(MyApp());
 
@@ -8,62 +8,72 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ChangeNotifierProvider<AplicationColor>(
-        builder: (context) => AplicationColor(),
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.grey[50],
-            title: Consumer<AplicationColor>(
-              builder: (context, aplicationcolor, _) => Text(
-                'Provider',
-                style: TextStyle(color: aplicationcolor.warna),
-              ),
-            ),
-          ),
-          body: Center(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Latihan Provider'),
+        ),
+        body: Center(
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Consumer<AplicationColor>(
-                  builder: (context, aplicationcolor, _) => AnimatedContainer(
-                    margin: EdgeInsets.all(5),
-                    width: 100,
-                    height: 100,
-                    color: aplicationcolor.warna,
-                    duration: Duration(microseconds: 500),
-                  ),
+                MyButton(
+                  iconnya: Icon(Icons.color_lens),
+                  routing: '/menu1',
+                  judul: 'Provider',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        margin: EdgeInsets.all(5),
-                        child: Text(
-                          'Red accent',
-                          style: TextStyle(color: Colors.redAccent),
-                        )),
-                    Consumer<AplicationColor>(
-                      builder: (context, aplicationcolor, _) => Switch(
-                        value: aplicationcolor.isLightBlue,
-                        onChanged: (valueBaru) {
-                          aplicationcolor.isLightBlue = valueBaru;
-                        },
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      child: Text(
-                        'light blue',
-                        style: TextStyle(color: Colors.lightBlue),
-                      ),
-                    )
-                  ],
+                MyButton(
+                  iconnya: Icon(Icons.multiline_chart),
+                  routing: '/menu2',
+                  judul: 'MultiProvider',
+                ),
+                MyButton(
+                  iconnya: Icon(Icons.ac_unit),
+                  routing: '/menu1',
+                  judul: 'SliverAppBar1',
                 ),
               ],
             ),
           ),
         ),
       ),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/menu1': (BuildContext context) => LatihanProvider(),
+        '/menu2': (BuildContext context) => MultiProvider(),
+      },
+    );
+  }
+}
+
+class MyButton extends StatelessWidget {
+  final iconnya;
+  final routing;
+  final judul;
+  MyButton({this.iconnya, this.routing, this.judul});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        FlatButton(
+          child: Row(
+            children: <Widget>[
+              iconnya,
+              Padding(
+                padding: EdgeInsets.only(left: 10),
+              ),
+              Text(
+                judul,
+                style: TextStyle(fontSize: 25),
+              )
+            ],
+          ),
+          onPressed: () {
+            Navigator.of(context).pushNamed(routing);
+          },
+        )
+      ],
     );
   }
 }
