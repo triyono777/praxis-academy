@@ -9,6 +9,11 @@ class MultiProvider extends StatelessWidget {
           title: Text('Multi provider'),
           backgroundColor: Colors.purple,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.add_shopping_cart),
+          backgroundColor: Colors.purple,
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,6 +31,7 @@ class MultiProvider extends StatelessWidget {
                     margin: EdgeInsets.all(5),
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
                         color: Colors.purple[100],
                         border: Border.all(color: Colors.purple, width: 2)),
                     child: Align(
@@ -44,6 +50,7 @@ class MultiProvider extends StatelessWidget {
                 margin: EdgeInsets.all(5),
                 padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Colors.black, width: 2)),
                 child: Align(
                   alignment: Alignment.centerRight,
