@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         builder: (context) => AplicationColor(),
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.grey[50],
             title: Consumer<AplicationColor>(
               builder: (context, aplicationcolor, _) => Text(
                 'Provider',
