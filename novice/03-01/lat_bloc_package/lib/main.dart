@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MainPage(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +33,7 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
         appBar: AppBar(
-          title: Text('Bloc tanpa Library'),
+          title: Text('Bloc dengan Library/Package'),
         ),
         body: Center(
           child: AnimatedContainer(
