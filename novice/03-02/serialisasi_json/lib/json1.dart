@@ -34,6 +34,7 @@ class JsonSatuState extends State<JsonSatu> {
   @override
   void initState() {
     this.getData();
+    super.initState();
   }
 
   @override
