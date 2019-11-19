@@ -17,10 +17,9 @@ class JsonSatuState extends State<JsonSatu> {
   List data;
 
   Future<String> getData() async {
-    var response = await http
-        .get(Uri.encodeFull("https://jsonplaceholder.typicode.com/posts"),
-            // Uri.encodeFull("https://jsonplaceholder.typicode.com/users"),
-            headers: {"Accept": "application/json"});
+    var response = await http.get(
+        Uri.encodeFull("https://jsonplaceholder.typicode.com/posts"),
+        headers: {"Accept": "application/json"});
 
     this.setState(() {
       data = json.decode(response.body);
@@ -47,15 +46,6 @@ class JsonSatuState extends State<JsonSatu> {
         itemBuilder: (BuildContext context, int index) {
           return new Card(
             child: new Text(data[index]["title"]),
-            // child: Column(
-            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //   children: <Widget>[
-            //     new Text(data[index]["id"].toString()),
-            //     // new Text(data[index]["name"].toString()),
-            //     // new Text(data[index]["address"].toString()),
-            //     // new Text(data [{'address': ['street']}]),
-            //   ],
-            // ),
           );
         },
       ),
