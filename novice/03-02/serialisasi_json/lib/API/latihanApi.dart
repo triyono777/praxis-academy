@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:serialisasi_json/API/model_post_hasil.dart';
 
 class LatihanAPI extends StatefulWidget {
   @override
@@ -6,6 +7,7 @@ class LatihanAPI extends StatefulWidget {
 }
 
 class _LatihanAPIState extends State<LatihanAPI> {
+  var postHasil;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,9 +19,26 @@ class _LatihanAPIState extends State<LatihanAPI> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text('Hasil Kembalian'),
+              Text((postHasil != null
+                  ? postHasil.id +
+                      '|' +
+                      postHasil.nama +
+                      '|' +
+                      postHasil.pekerjaan +
+                      '|' +
+                      postHasil.dibuat
+                  : 'tidak ada datanya')),
+
+              // .then mengembalikan nilai dari api kepada pemanggil
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  PostHasil.konekKeAPi("triyono", "programmer")
+                      .then((nilaiValue) {
+                    postHasil = nilaiValue;
+                    setState(() {});
+                    print(postHasil);
+                  });
+                },
                 child: Text('POST'),
               )
             ],
