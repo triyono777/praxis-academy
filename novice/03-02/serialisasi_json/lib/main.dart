@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:serialisasi_json/json2.dart';
 import 'json1.dart';
+import 'json_background.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/json1': (BuildContext context) => JsonSatu(),
         '/json2': (BuildContext context) => JsonDua(),
+        '/json3': (BuildContext context) => JsonBackgound(),
         // '/menu2': (BuildContext context) => SilverAppBarContoh2(),
         // '/menu3': (BuildContext context) => SliverGridContoh(),
         // '/menu4': (BuildContext context) => LatihanSliver(),
@@ -29,12 +31,12 @@ class MyApp extends StatelessWidget {
             ),
             MyButton(
               iconnya: Icon(Icons.pages),
-              judul: 'Json 2',
+              judul: 'Json nested',
               routing: '/json2',
             ),
             MyButton(
               iconnya: Icon(Icons.offline_bolt),
-              judul: 'Json 3',
+              judul: 'Json Background',
               routing: '/json3',
             ),
           ],

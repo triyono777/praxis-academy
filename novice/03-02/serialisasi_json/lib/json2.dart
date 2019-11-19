@@ -34,6 +34,7 @@ class JsonDuaState extends State<JsonDua> {
   @override
   void initState() {
     this.getData();
+    super.initState();
   }
 
   @override
