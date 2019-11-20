@@ -1,4 +1,4 @@
-package com.example.lathan_baby_name
+package com.example.nama_bayi
 
 import android.os.Bundle
 
