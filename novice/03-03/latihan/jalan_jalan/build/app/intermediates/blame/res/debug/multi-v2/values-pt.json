@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/media/umum/bootcamp/praxis-academy/novice/03-03/latihan/jalan_jalan/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "map": [
+                {
+                    "source": "/home/triyono/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/8551a39e8ebc674c0e2595762e5d0812/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

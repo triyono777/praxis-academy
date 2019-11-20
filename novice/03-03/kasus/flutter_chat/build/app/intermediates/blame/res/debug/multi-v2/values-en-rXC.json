@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/media/umum/bootcamp/praxis-academy/novice/03-03/kasus/flutter_chat/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/home/triyono/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/461a52355444677597cc448b794229cb/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "202",
+                        "endOffsets": "253"
+                    }
+                }
+            ]
+        }
+    ]
+}

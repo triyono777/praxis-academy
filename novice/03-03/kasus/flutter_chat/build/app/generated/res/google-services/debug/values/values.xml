@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">501040530400-uenod3r31njubvqsis5jj53jjkcqt3q6.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://scannen-apps.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">501040530400</string>
+    <string name="google_api_key" translatable="false">AIzaSyDjP49SKEjHevXzmJP3fko8vuBu-1qzkFY</string>
+    <string name="google_app_id" translatable="false">1:501040530400:android:55aede9b37bc42112c2185</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDjP49SKEjHevXzmJP3fko8vuBu-1qzkFY</string>
+    <string name="google_storage_bucket" translatable="false">scannen-apps.appspot.com</string>
+    <string name="project_id" translatable="false">scannen-apps</string>
+</resources>
