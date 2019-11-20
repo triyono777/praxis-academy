@@ -3,7 +3,7 @@ import 'package:serialisasi_json/json2.dart';
 import 'json1.dart';
 import 'json_background.dart';
 import './API/latihanApi.dart';
-import 'API2/lat_api.dart';
+import 'json_listview.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
         '/json2': (BuildContext context) => JsonDua(),
         '/json3': (BuildContext context) => JsonBackgound(),
         '/latihanApi': (BuildContext context) => LatihanAPI(),
-        '/latihanApi2': (BuildContext context) => Lat2(),
+        '/latihanJsonListView': (BuildContext context) => LatihanJsonListView(),
+
         // '/menu3': (BuildContext context) => SliverGridContoh(),
         // '/menu4': (BuildContext context) => LatihanSliver(),
       },
@@ -51,6 +52,11 @@ class MyApp extends StatelessWidget {
               iconnya: Icon(Icons.flight),
               judul: 'latihanApi2',
               routing: '/latihanApi2',
+            ),
+            MyButton(
+              iconnya: Icon(Icons.av_timer),
+              judul: 'latihanJsonListView',
+              routing: '/latihanJsonListView',
             ),
           ],
         ),
