@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 beberapa sumber yang bisa di gunakan salah satunya
 
 -[sliver](https://medium.com/flutter/slivers-demystified-6ff68ab0296f)
+-[sliver on youtube](https://www.youtube.com/watch?v=k2v3gxtMlDE)
