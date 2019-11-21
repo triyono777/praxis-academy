@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Sliver Animasi
+beberapa sumber yang bisa di gunakan salah satunya
+
+-[sliver](https://medium.com/flutter/slivers-demystified-6ff68ab0296f)
