@@ -72,7 +72,7 @@ class MyHomePage extends StatelessWidget {
               SizedBox(height: 10),
               Text(
                 'This will not be translated.',
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 25, color: Colors.redAccent),
                 textAlign: TextAlign.center,
               ),
             ],
