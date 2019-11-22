@@ -1,5 +1,9 @@
 {
   "nama_kota": "Nama Kota",
   "placeholder_kota": "Masukkan nama kota",
-  "nama_aplikasi": "Cuaca Apps Fake"
+  "nama_aplikasi": "Cuaca Apps Fake",
+  "detail": "Lihat rincian",
+  "title_search": "Cuaca Pencarian",
+  "title_detail": "Cuaca Detail",
+  "snackbar_error": "Cuaca Detail"
 }

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'app_localizations.dart';
+import 'bloc/weather_bloc.dart';
+import 'data/weather_repository.dart';
+import 'pages/weather_search_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +44,12 @@ class MyApp extends StatelessWidget {
         return supportedLocales.first;
       },
 
-      home: WeatherPage(),
+      home: BlocProvider(
+        builder: (context) => WeatherBloc(FakeWeatherRepository()),
+        child: WeatherSearchPage(),
+      ),
+
+      // home: WeatherPage(),
     );
   }
 }
