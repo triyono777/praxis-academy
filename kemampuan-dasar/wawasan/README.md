@@ -5,6 +5,7 @@ TI merupakan semua hal yang berhubungan dengan informasi, data atau apapun dalam
 # computer science
 Computer Science adalah studi tentang teori dan teknik dalam penggunaan komputer,sedangkan Informatics merupakan cabang dari rekayasa sistem informasi dan terapan.
 
+# software development
 Software development adalah salah satu tipe projek dalam bidang IT yang berfokus pada menciptakan ataupun mengembangkan sebuah perangkat lunak. 
 Software enginering adalah penerapan prinsip-prinsip teknik pengembangan perangkat lunak.
 
