@@ -15,6 +15,7 @@ Agile Software Development adalah kumpulan dari metode pengembangan software yg 
 # scrum
 Scrum adalah sebuah framework untuk manajemen pengembangan software yang bersifat interaktif,mudah dalam monitoring, dapat dengan mudah mengatasi perubahan, didalamnya ada product backlog, sprint backlog, daily sprint,Sprint review meeting,Sprint retrospective
 
+# extreme programming
 Extreme Programming (XP) adalah metode pengembangan software yang cepat, efisien, beresiko rendah, fleksibel, terprediksi, scientific, dan menyenangkan. XP ini cocok untuk pengembangan mobile dengan jumlah programmer sedikit.
  
 
