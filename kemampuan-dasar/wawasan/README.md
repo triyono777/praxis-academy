@@ -1,3 +1,4 @@
+# wawasan tentang dunia IT
 Teknologi Informasi(TI) adalah istilah yang membantu manusia dalam membuat, mengubah, menyimpan dan atau menyebarkan informasi. Istilah ini muncul pertama pada tahun 1958 pada sebuah artikel yang diterbitkan dalam Harvard Business Review. 
 TI merupakan semua hal yang berhubungan dengan informasi, data atau apapun dalam format visual maupun yang lain , melalui mekanisme distribusi multimedia.
 
