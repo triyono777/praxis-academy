@@ -2,6 +2,7 @@
 Teknologi Informasi(TI) adalah istilah yang membantu manusia dalam membuat, mengubah, menyimpan dan atau menyebarkan informasi. Istilah ini muncul pertama pada tahun 1958 pada sebuah artikel yang diterbitkan dalam Harvard Business Review. 
 TI merupakan semua hal yang berhubungan dengan informasi, data atau apapun dalam format visual maupun yang lain , melalui mekanisme distribusi multimedia.
 
+# computer science
 Computer Science adalah studi tentang teori dan teknik dalam penggunaan komputer,sedangkan Informatics merupakan cabang dari rekayasa sistem informasi dan terapan.
 
 Software development adalah salah satu tipe projek dalam bidang IT yang berfokus pada menciptakan ataupun mengembangkan sebuah perangkat lunak. 
