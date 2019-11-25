@@ -593,3 +593,5 @@ triyono@develop:/media/umum/praxis-tugas/foldernya bob/rhymes\$
 
 # masih ada beberapa error , belum bisa menggunakan 2 akun github dalam 1 pc
 
+
+
