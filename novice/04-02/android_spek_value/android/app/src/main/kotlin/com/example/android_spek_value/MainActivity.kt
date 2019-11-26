@@ -1,4 +1,4 @@
-package com.example.halopaket_example
+package com.example.android_spek_value
 
 import android.os.Bundle
 
@@ -9,7 +9,5 @@ class MainActivity: FlutterActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     GeneratedPluginRegistrant.registerWith(this)
-
-    
   }
 }

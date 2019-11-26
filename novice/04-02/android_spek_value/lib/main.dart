@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:device_info/device_info.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,14 +7,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Material(
-        color: Colors.amber[100],
         child: Center(
-            child: Text(
-          'info: ',
-          style: TextStyle(fontSize: 30),
-        )),
+          child: Text('halooo'),
+        ),
       ),
     );
   }
