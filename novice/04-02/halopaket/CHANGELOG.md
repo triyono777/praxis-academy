@@ -1,3 +1,4 @@
-## 0.0.1
+## [0.0.1] - 26 Nov 2019
 
-* TODO: Describe initial release.
+
+* initial package
