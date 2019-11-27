@@ -14,6 +14,7 @@ class HeroApp extends StatelessWidget {
   @override
   Widget build(_) {
     return MaterialApp(
+      showPerformanceOverlay: true,
       title: 'Transition Demo',
       home: MainScreen(),
       initialRoute: '/', // untuk route kehome
