@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -80,6 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               onPressed: () => setState(() {
                 _launched = _launchInWebViewOrVC(toLaunch);
+                // debugDumpRenderTree(); // menampilkan debug ke console berupa tree dari widget
+                // debugDumpApp(); // menampilkan debug ke console
+                // debugDumpLayerTree(); // menampilkan debug ke console
+                //  debugPaintSizeEnabled=true; // menampilkan garis layout pada aplikasi
               }),
               child: Text('Launch in app'),
             ),
