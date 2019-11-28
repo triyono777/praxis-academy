@@ -7,7 +7,7 @@ void main() {
       flavor: Flavor.PRODUCTION,
       values: FlavorValues(
           baseUrl:
-              "https://raw.githubusercontent.com/triyono777/praxis-academy/blob/master/novice/04-04/latihan/ready_to_go/master/lib/json/person_production.json"));
+              "https://raw.githubusercontent.com/triyono777/praxis-academy/master/novice/04-04/latihan/ready_to_go/lib/json/person_production.json"));
 
   runApp(MyApp());
 }
