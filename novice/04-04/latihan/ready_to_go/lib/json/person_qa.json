@@ -1,0 +1,10 @@
+{
+  "person": {
+    "apiUrl": "person_qa.json",
+    "name": "Triyono",
+    "lastName": "flutterDev",
+    "github": "github.com/triyono777",
+    "twitter": "@triyono777",
+    "website": "triyono777.com"
+  }
+}
