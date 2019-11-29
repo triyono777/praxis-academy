@@ -1,0 +1,2 @@
+json_key_file("/media/umum/bootcamp/praxis-academy/novice/04-05/fastlane/api-6513177146366453816-134483-72cb6789e388.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.praxis.praxiscounter") # e.g. com.krausefx.app
