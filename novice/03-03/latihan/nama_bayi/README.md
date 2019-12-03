@@ -1,6 +1,6 @@
 # nama_bayi
 
-A new Flutter project.
+A new Flutter project
 
 ## 
 
